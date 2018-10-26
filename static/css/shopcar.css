@@ -1,0 +1,49 @@
+.shopcar{ width: 100%; height: auto; overflow: hidden; }
+.shopcar_con{ width: 1200px; height: auto; overflow: hidden; margin: 0 auto;}
+.head{ width: 1200px; height: 100px;}
+.logo{width: 230px; height: 64px; float: left; padding-top: 20px; line-height: 30px;}
+.logo img{ width: 127px; height: 64px; float: left;}
+.logo span{ display: block; width: 100px; height: 64px; line-height: 64px; float: right;}
+.search{ width: 325px; height: 64px; float: right; padding-top: 30px;}
+.searchinput{ width: 270px; height: 28px; border: 2px solid #16AF13;}
+.searchbtn{ width: 50px; height: 32px; background: #16AF13; border: none; margin-left: -5px;}
+.shopcar_nav{ width: 1200px; height: 34px; border-bottom: 1px solid #666; float: left; margin-top: 30px;}
+.shopcar_nav a{display: block; float: left; color: #000; width: 137px; height: 22px; border-left: 1px solid #ccc; text-align: center;}
+.shopcar_nav a:nth-child(1){ border-left: none;}
+.shopcar_nav a:hover{ color: orange;}
+.shopcar_nav a b{ margin-left: 10px; color: orange;}
+
+
+.shopcar_main{ width: 1200px; height: auto; overflow: hidden; margin: 0 auto;}
+.selectAll{ width: 1200px; height: 64px; line-height: 64px; font-size: 14px;}
+.selectAll i{ display: block; width: 50px; height: 64px; float: left;}
+.selectAll i input{ margin-top: -10px; margin-left: 10px;}
+.selectAll em{ display: block; font-style: normal; width: 70px; height: 24px; float: left; border-radius: 8px; }
+.selectAll b{ display: block; width: 20px; height: 20px; background: url(../img/shopcar/help.jpg) no-repeat; margin: 25px 10px; float: left;}
+.mail{ width: 350px; height: 64px; float: left;}
+
+.shopcar_list{ width: 1200px; height: 500px; margin: 0 auto;}
+.shopcar_list li{ width: 1198px; height: 110px; border: 1px solid #ccc; float: left;}
+.checkAll{ width: 50px; height: 110px; float: left;}
+.checkAll input{ margin: 50px 10px;}
+.picture{ width: 450px; height: 89px; line-height: 110px; float: left; margin-top: 10px;}
+.picture h1 img{ width: 89px; height: 89px; float: left; border: 1px solid #ccc;} 
+.picture p{ width: 340px; height: 89px; font-size: 14px; float: left; line-height: 0px; line-height: 89px; margin-left: 10px;}
+.num{ width: 100px; height: 50px; float: left; margin-left: 100px; margin-top: 45px; }
+.num em{ display:block; width: 15px; height: 20px; border: 1px solid #ccc; float: left; line-height:20px ;}
+.num input{ width: 40px; height: 20px; float: left; text-align: center;}
+.num i{display:block; width: 15px; height: 20px; border: 1px solid #ccc; float: left; line-height:20px ;}
+.price{ width: 90px; height: 50px; float: left; font-size: 14px; margin-top: 40px; font-weight: 600; margin-left: 130px;}
+.price span{ font-size: 12px; display: block; width: 90px; height: 20px; font-weight: 500; color: #999;}
+.remove{ width: 100px; height: 110px; float: left; line-height: 110px; float: right;}
+.remove a{ color: #666; font-size: 12px; cursor: pointer;}
+
+.account{ width: 1200px; height: 62px; background: #ccc; float: left; }
+.removeAll{ width: 300px; height: 30px; float: left; margin: 20px 10px; font-size: 14px;}
+.removeAll a{ color: #000; margin-left: 20px;}
+.total{ width: 400px; height: 62px; float: right;}
+.total span{ display: block; width: 100px; height: 62px; font-size: 12px; color: #000; float: left; line-height: 62px; }
+.total h3{ display: inline-block; font-size: 18px; color: #d4082a; margin-top: 20px;}
+.count{ width: 200px; height: 62px; float: right; line-height: 62px; text-align: center; background: #16AF13; color: #fff; border-radius: 6px;}
+.still{ width: 1200px; height: 60px; margin: 0 auto;}
+.still input{ margin: 20px 20px;}

@@ -1,0 +1,109 @@
+.head_htop{ width: 100%; height: 147px;}
+.headtop_tcon{ width: 1200px; height: 147px; margin: 0 auto;}
+.tcon_top{ width: 1200px; height: 110px; margin: 0 auto;}
+.headtop_tcon h3{ float: left; margin-top: 26px; width: 145px; height: 62px;}
+.form{ width: 500px; height: 60px; float: left; margin-top: 32px; margin-left: 110px;}
+.input{ width: 404px; height: 30px; border: 2px solid #459d36;}
+.btn{ width: 76px; height: 34px; border: none; background: #459d36; margin-left: -5px;}
+.nav{ width: 480px; height: 15px; font-size: 12px; margin-top: 12px;}
+.nav p{ float: left; color: #999; font-family: "宋体";}
+.nav span{ color: #ff0000;}
+.nav h6{ float: right; margin-right: 40px;}
+.nav h6 li{ float: left; margin-left: 10px; border-left: 1px solid #999; padding-left: 10px;}
+.nav h6 li a{ color: #999; font-size: 12px; font-family: "宋体";}
+.nav h6 li a:hover{ color: #333;}
+.headtop_tcon h5 { width: 160px; height: 22px; float: left; font-size: 18px;  ; color: #9a9a9a; margin-top: 32px; font-family:"宋体"; font-style: normal; margin-left: 30px;}
+.head_headtop_tconcon h5 img{ float: left;}
+.headtop_tcon h5 i{width: 112px; height: 22px; float: right; display: block; margin-right: 27px;}
+.headtop_tcon h4{ width: 128px; height: 40px; float: right; margin-top: 34px; font-family: "宋体";  font-size: 12px;}
+.headtop_tcon h4 a{ color:#666; margin-left: 50px; margin-top: -30px; display: block;}
+.headtop_tcon h4 a:hover{ color: #27A9EC;}
+
+.tcon_bottom{ width: 1200px; height: 36px; margin: 0 auto;}
+.bottom_left{ width: 228px; height: 34px; border: 1px solid #eee; float: left;  }
+.bottom_left li{float: left; width: 112px; height: 34px;}
+.bottom_left li a{ color: #666; width: 115px; height: 36px; display: block; text-align: center; line-height: 36px;}
+.bottom_left li:nth-child(1) a b{ background: url(../img/homepage/bg2.png) 34px -1257px; width: 16px; height: 17px; display: block; margin-left: 90px; margin-top: -25px;}
+.bottom_left li:nth-child(2) a b{ background: url(../img/homepage/bg2.png) 34px -1270px; width: 16px; height: 15px; display: block; margin-left: 94px; margin-top: -25px;}
+.bottom_left li a:hover{ color: #fff; background: #ccc;}
+
+.bottom_center{ width: 486px; height: 36px; float: left;}
+.bottom_center li{ float: left; width: 115px; height: 36px; line-height: 36px; text-align: center;}
+.bottom_center li a b{ display: block; width: 12px; height: 17px; background: url(../img/homepage/bg2.png) no-repeat -35px -1280px; margin-top: -25px;margin-left: 10px;}
+.bottom_center li:nth-child(2) b{ background: url(../img/homepage/new.gif) no-repeat; width: 17px; height: 20px; margin-left: 80px; margin-top: -45px;}
+.bottom_center li a{ color: #000; font-weight: 800; font-size: 16px;}
+.bottom_center li a:hover{ color: #459d36;}
+.bottom_right{ width: 180px; height: 42px; float: right;  margin-top: -10px; }
+
+/*主体*/
+.goods_con{ width: 100%;  height: auto; overflow: hidden;  background: #f5f5f5; }
+.goods_main{ width: 1200px; height: 700px; background: #fff; margin: 0 auto;}
+
+.goods_list{ width: 1200px; height: 50px; background: #f5f5f5; line-height: 50px; } 
+.list_ul{ width: 450px; height: 28px; float: left; margin-top: 10px;}
+.list_ul li{ float: left; margin-left: 20px;}
+.list_ul li a{ width: 119px; height: 26px; background: #fff; font-size: 12px; display: block; text-align: center; line-height: 26px; }
+.goodsdaily{ width: 100px; height: 24px; float: left;  }
+
+.tab{ width: 600px; height: 120px; float: left;}
+.list_li1{ width: 119px; height: 60px; display: none; border: 1px solid #ccc; position: absolute; z-index: 999;} 
+.list_li1 a{ color: #333333; width: 100px; height: 20px; display: block; float: left; border-bottom: 1px dashed #CCCCCC;} 
+.list_li1 a:hover{ color: #27A9EC;}
+.list_li1 a span{ display: block; width: 60px; height: 20px; float:right; text-align: left; color: #999;}
+
+.list_li2{ width: 119px; height: 105px;   display: none; border: 1px solid #ccc; position: absolute; z-index: 999;} 
+.list_li2 a{ color: #333333; width: 100px; height: 20px; display: block; float: left;  border-bottom: 1px dashed #CCCCCC; }
+.list_li2 a:hover{ color: #27A9EC;}
+.list_li2 a span{ display: block; width: 60px; height: 20px; float:right; text-align: left; color: #999;}
+
+.list_li3{ width: 120px; height: 100px;  display: none; border: 1px solid #ccc; position: absolute; z-index: 999;} 
+.list_li3 a{ color: #333333; width: 100px; height: 20px; display: block; float: left;  border-bottom: 1px dashed #CCCCCC; }
+.list_li3 a:hover{ color: #27A9EC;}
+.list_li3 a span{ display: block; width: 60px; height: 20px; float:right; text-align: left; color: #999;}
+
+/*内容*/
+.goodscar{ width: 1200px; height: 600px; margin: 0 auto; position: relative; }
+.glass{ width: 400px; height: 450px; float: left;  }
+.info{ width: 800px; height: 650px; float: right; background: #fcfcfc;}
+#smallImg{ width: 200px; height: 200px; background: url(../img/goods/1726c8e64575c7ee8e87168120d59479_看图王.jpg) center; background-size: cover; position: absolute; left: 100px; top: 50px;}
+#smallArea{ display: none; width: 50px; height: 50px; background: rgba(200, 255, 200, 0.3); position: absolute; left: 50px; top: 20px;}
+#bigArea{display: none; overflow: hidden; width: 400px; height: 400px; background: rgba(100,200,100, 0.3); position: absolute; left: 400px; top: 0px;}
+#bigImg{ position: absolute; left: 0; top: 0; width: 800px; height: 800px;}
+.img_list{ width: 330px; height: 80px; position: absolute; top: 300px; left: 50px; }
+.img_list img{ width: 70px; height: 70px;}
+.enjoin{ width: 100px; height: 30px; position: absolute; top: 400px; left: 200px; margin-top: 20px;  }
+
+
+.info_con{ width: 700px; height: auto; overflow: hidden; margin: 0 auto;  }
+.info_con h3{ font-size: 18px; font-style: normal; height: 30px; font-family: "宋体";}
+.price{ width: 700px; height: 110px; background: url(../img/goods/price-bg.jpg) no-repeat;}
+.pre_price{ width: 625px; height: 20px; padding-top: 20px; margin-left: 20px;}
+.pre_price i{ color: red; font-size: 18px; font-style: normal;}
+.now_price{ width: 625px; height: 20px; padding-top: 20px; margin-left: 20px;}
+.now_price i{  color: red; font-size: 18px; font-style: normal; }
+
+.goods_num{ width: 500px; height: 70px;}
+.num1{ width: 230px; height: 30px; float: left;}
+
+.orange_list{ width: 700px; height: 50px; border-bottom: 1px dashed #ccc;}
+.orange_list li{ float: left; width: 70px; height: 30px; text-align: center; line-height: 30px; margin-left: 5px; background: orange; border-radius: 8px;}
+.orange_list li:nth-child(1){ margin-left: 0px;}
+
+.size{ width: 700px; height: 130px; border-bottom: 1px dashed #ccc; padding-top: 20px;}
+.big{ width: 200px; height: 35px; line-height: 35px;}
+.big span{ display: block; width: 50px; height: 30px; float: left; }
+.big a{ display: block;  width: 50px; height: 30px; float: left; background: #fff; border: 1px solid #E6E6E6; text-align: center; line-height: 30px; background: url(../img/goods/goods-select.png) right bottom no-repeat; }
+.color{ width: 250px; height: 35px; line-height: 35px;} 
+.color span{ display: block; width: 50px; height: 30px; float: left; }
+.color a{ display: block;  width: 50px; height: 30px; float: left; background: #fff; border: 1px solid #E6E6E6; text-align: center; line-height: 30px; background: url(../img/goods/goods-select.png) right bottom no-repeat; }
+.buy{ width: 300px; height: 38px; line-height: 35px;}
+.buy span{ display: block; width: 80px; height: 30px; float: left;}
+.buy input{ width: 30px; height: 35px; float: left; text-align: center; }
+.minu{ display: block; width: 14px; height: 35px; float: left; background: #fff; border: 1px solid #ccc; text-align: center;}
+.add{display: block; width: 14px; height: 35px; float: left; background: #fff;border: 1px solid #ccc; text-align: center;}
+.order{ width: 625px; height: 30px; margin-top: 20px;}
+.order span{ color: #666; font-size: 14px;}
+.car_btn{ width: 500px; height: 50px; margin-top: 30px;}
+.car_btn input{ float: left; width: 190px; height: 56px; background: #78b300; color: #fff; font-size: 20px; border: none; border-radius: 5px;}
+.car_btn a{display: block; float: left; width: 50px; height: 50px; margin-left: 20px;   }
+.car_btn a i{ display: block; width: 30px; height: 30px; background: url(../img/goods/xqico.png) -8px -388px;} 
