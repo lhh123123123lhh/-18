@@ -1,3 +1,5 @@
+from django.db.models import Q
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -6,7 +8,7 @@ from app.models import Site, Data, Link, Dog, Dog1, Goods, Item, Recommend, User
 
 def homepage(request):
     tel = request.COOKIES.get('tel')
-    user = User.objects.filter(tel=tel)
+    user = User.objects.filter(tel=tel).first()
     safesites = Site.objects.all()[0:6]
     honoursites = Site.objects.all()[6:12]
     datas = Data.objects.all()
@@ -45,9 +47,15 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
     elif request.method == 'POST':
-
-        response = redirect('app:homepage')
-        return response
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = User.objects.filter(username=username).filter(password=password)
+        if user.exists():
+            response = redirect('app:homepage')
+            response.set_cookie('tel', user.first().tel)
+            return response
+        else:
+            return HttpResponse('用户名或者密码错误')
 
 
 def register(request):
@@ -71,7 +79,7 @@ def shopcar(request):
     return render(request, 'shopcar.html')
 
 
-# def logout(request):
-#     response = redirect('app:homepage')
-#     response.delete_cookie('tel')
-#     return response
+def logout(request):
+    response = redirect('app:homepage')
+    response.delete_cookie('tel')
+    return response

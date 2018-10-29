@@ -27,13 +27,13 @@
         <div class="header_right">
             <ul>
                 <li>
-{#                    {% if tel %}#}
+                    {% if tel %}
                         {{ user.username }}
-{#                    {% else %}#}
-{#                        还未登录#}
-{#                    {% endif %}#}
+                    {% else %}
+                        还未登录
+                    {% endif %}
                 </li>
-{#                <li><a href="{% url 'app:logout' %}">退出登录</a></li>#}
+                <li><a href="{% url 'app:logout' %}">退出登录</a></li>
                 <li><a href="{% url 'app:login' %}">[登录]</a></li>
                 <li><a href="{% url 'app:register' %}">[注册]</a></li>
                 <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
