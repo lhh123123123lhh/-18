@@ -1,8 +1,55 @@
-* {margin: 0; padding: 0; border: none;}
-ul, li {list-style: none;}
-.banner{ width: 770px; height: 360px; float: left;  overflow: hidden; position: relative;}
-#banner_ul{ width: 6160px; height: 360px; position: absolute;}
-#banner_ul li{ float: left; }
-#banner_bar{ width: 220px; height: 30px;   position: absolute; left: 35%; bottom: 0;}
-#banner_bar li{ width: 20px; height: 20px; color: #fff; font-size: 12px;line-height: 20px; background: #CCC; text-align: center; border-radius: 50%; float: left; z-index: 999;   margin-left: 10px; cursor: pointer;}
-#banner_bar .active2{ background: #fff; color: black;}
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.banner {
+    width: 770px;
+    height: 360px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+#banner_ul {
+    width: 6160px;
+    height: 360px;
+    position: absolute;
+}
+
+#banner_ul li {
+    float: left;
+}
+
+#banner_bar {
+    width: 220px;
+    height: 30px;
+    position: absolute;
+    left: 35%;
+    bottom: 0;
+}
+
+#banner_bar li {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    background: #CCC;
+    text-align: center;
+    border-radius: 50%;
+    float: left;
+    z-index: 999;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#banner_bar .active2 {
+    background: #fff;
+    color: black;
+}
