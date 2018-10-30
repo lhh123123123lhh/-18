@@ -386,17 +386,17 @@
 							</p> 									 												 												 
 						</span>
         </div>
-        <div class="banner" id="banner">
-            <div class="banner swiper-container" id="banner">
-                <ul id="banner_ul swiper-wrapper">
-                    {% for image in images %}
-                        <li class="swiper-slide"><img src="{{ image.img_src }}"></li>
-                    {% endfor %}
-                </ul>
-                <ul id="banner_bar" class="swiper-pagination">
-                </ul>
-            </div>
+
+        <div class="banner swiper-container" id="banner">
+            <ul id="banner_ul" class="swiper-wrapper">
+                {% for image in images %}
+                    <li class="swiper-slide"><img src="{{ image.img_src }}"></li>
+                {% endfor %}
+            </ul>
+            <ul id="banner_bar" class="swiper-pagination">
+            </ul>
         </div>
+
 
         <div class="main_right">
             <ul>

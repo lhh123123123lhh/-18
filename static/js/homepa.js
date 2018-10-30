@@ -35,8 +35,13 @@ $(function () {
         $(this).css("border", "none");
         $(this).children("div").css("display", "none");
     })
-
-
+    // 轮播图
+    var swiper = new Swiper('#banner', {
+        pagination: '.swiper-pagination',
+        autoplay: 3000,
+        slidesPerView: 1,
+        loop: true
+    });
     //活动时间
     $(".ctb_right ul li").mouseenter(function () {
         console.log("ee");
@@ -83,12 +88,4 @@ $(function () {
 
 
 })
-// 轮播图
-$(function () {
-    var swiper = new Swiper('#banner', {
-        pagination: '.swiper-pagination',
-        autoplay:true,
-        slidesPerView: 1,
-        time:3000
-    });
-})
+
