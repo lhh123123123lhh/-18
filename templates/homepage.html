@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="{% static 'css/common.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/slip.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}"/>
+
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/slip.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/homepa.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/content.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/center1.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/center2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/swiper.js' %}"></script>
 </head>
 <body>
 <!--头部开始-->
@@ -27,7 +30,7 @@
         <div class="header_right">
             <ul>
                 <li>
-                    {% if tel %}
+                    {% if token %}
                         {{ user.username }}
                     {% else %}
                         还未登录
@@ -90,7 +93,7 @@
             </h5>
             <h4>
                 <img src="{% static 'img/homepage/shopping-cart.gif' %}"/>
-                <a href="#">购物车（0）</a>
+                <a href="{% url 'app:shopcar' %}">购物车（0）</a>
             </h4>
         </div>
 
@@ -117,7 +120,6 @@
         </div>
     </div>
 </div>
-
 <div class="head_middle" id="head_middle">
     <div class="headmiddle_main">
         <div class="main_left">
@@ -288,10 +290,11 @@
 								<div class="box3_left">
 			    	            	<ul class="box3_ul1">
 			    	            		<li><img
-                                                src="img/content/0f972761c08a37c8baff88fa9302053d.jpg@!50w-c.jpg"/></li>
+                                                src="{% static 'img/content/0f972761c08a37c8baff88fa9302053d.jpg@!50w-c.jpg' %}"/></li>
 			    	            		<li>狗狗主粮</li>
 			    	            		<li></li>
-			    	            		<li><img src="img/homepage/211686a11c4f6100d5d34c72ec543d48.gif"/></li>
+			    	            		<li><img
+                                                src="{% static 'img/homepage/211686a11c4f6100d5d34c72ec543d48.gif' %}"/></li>
 			    	            	</ul>
 			    	            	<ul class="box3_ul2">
 			    	            		<li>进口狗粮</li>
@@ -342,7 +345,7 @@
 				    	            	 	</ul>
 				    	            	</div>
 				    	            	<div class="box3r_bottom">
-				    	            	 	<img src="img/homepage/3791e091819aa5c3bf75bd9edd738f6c.jpg"/>
+				    	            	 	<img src="{% static 'img/homepage/3791e091819aa5c3bf75bd9edd738f6c.jpg' %}"/>
 				    	            	</div>
 			    	            	 </div>
 			    	            </div>
@@ -383,24 +386,29 @@
 							</p> 									 												 												 
 						</span>
         </div>
-
         <div class="banner" id="banner">
-            <ul id="banner_ul"></ul>
-            <ul id="banner_bar"></ul>
+            <div class="banner swiper-container" id="banner">
+                <ul id="banner_ul swiper-wrapper">
+                    {% for image in images %}
+                        <li class="swiper-slide"><img src="{{ image.img_src }}"></li>
+                    {% endfor %}
+                </ul>
+                <ul id="banner_bar" class="swiper-pagination">
+                </ul>
+            </div>
         </div>
 
         <div class="main_right">
             <ul>
-                <li><img src="img/homepage/130969908f6bc27ff3034f6a213fed69.jpg"/></li>
-                <li><img src="img/homepage/4504e9e495f15d9f1618e552584bffac.jpg"/></li>
-                <li><img src="img/homepage/ec34cdb14e0db752caa81fd7f7f379e3.jpg"/></li>
+                <li><img src="{% static 'img/homepage/130969908f6bc27ff3034f6a213fed69.jpg' %}"/></li>
+                <li><img src="{% static 'img/homepage/4504e9e495f15d9f1618e552584bffac.jpg' %}"/></li>
+                <li><img src="{% static 'img/homepage/ec34cdb14e0db752caa81fd7f7f379e3.jpg' %}"/></li>
             </ul>
         </div>
 
 
     </div>
 </div>
-
 <div class="head_bottom">
     <div class="headbottom_con">
         <div class="headbottom_left">
@@ -419,7 +427,7 @@
                 <div class="hbrt_left">
                     <ul>
                         <li>
-                            <img src="img/homepage/package-free.png"/>
+                            <img src="{% static 'img/homepage/package-free.png' %}"/>
                         </li>
                         <li>46787人在排队领取</li>
                         <li>
@@ -431,7 +439,7 @@
                     </ul>
                 </div>
                 <div class="hbrt_right">
-                    <span>已领取总额 &nbsp;<i>710030</i>&nbsp; 元</span>
+                    <span>已领取总额 &nbsp;<i>710030</i>元</span>
                 </div>
             </div>
             <div class="hbr_bottom">
@@ -440,46 +448,17 @@
                         <b></b>
                         <i>参与排队</i>
                     </li>
-                    <li>
-                        <img src="img/homepage/10.jpg@!60w-c.jpg"/>
-                        <p>比奴</p>
-                        <i>NO.7</i>
-                    </li>
-                    <li>
-                        <img src="img/homepage/ceb3eadabd95e7fc63fc1e8089b9cba3.png@!60w-c.jpg"/>
-                        <p>拉嘟</p>
-                        <i>NO.6</i>
-                    </li>
-                    <li>
-                        <img src="img/homepage/55377675c2180fee368ec5c5557a3f04.png@!60w-c.jpg"/>
-                        <p>小黑</p>
-                        <i>NO.5</i>
-                    </li>
-                    <li>
-                        <img src="img/homepage/713376023a956a456ec46c5948d85ba6.jpg@!60w-c.jpg"/>
-                        <p>比卡丘</p>
-                        <i>NO.4</i>
-                    </li>
-                    <li>
-                        <img src="img/homepage/7e0fd4fe9cf74cf24cd51782d4388917.jpg@!60w-c.jpg"/>
-                        <p>白笔</p>
-                        <i>NO.3</i>
-                    </li>
-                    <li>
-                        <img src="img/homepage/acb8afb81842067be645bb02f25335b1.png@!60w-c.jpg"/>
-                        <p>豆豆</p>
-                        <i>NO.2</i>
-                    </li>
-                    <li>
-                        <img src="img/homepage/e8f5a7522594266fd7b9eb309bf3d13f.jpg@!60w-c.jpg"/>
-                        <p>棒棒</p>
-                        <i>NO.1</i>
-                    </li>
+                    {% for item in dogs1 %}
+                        <li>
+                            <img src="{{ item.img_src }}">
+                            <p>{{ item.name }}</p>
+                            <i>{{ item.num }}</i>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
     </div>
-
 </div>
 <!--首部结束-->
 
@@ -547,9 +526,7 @@
             <img src="{% static 'img/content/ji1.jpg' %}"/>
         </div>
         <div class="center1_right">
-
         </div>
-
     </div>
     <div class="content_center2">
         <p>E仔今天推荐了哪些精品？</p>
@@ -979,7 +956,6 @@
     </div>
 </div>
 <!--内容结束-->
-
 <!--尾部开始-->
 <div class="footer">
     <div class="footer_top">
@@ -1047,7 +1023,6 @@
         </div>
     </div>
 </div>
-
 <div class="footer_mid">
     <div class="footer_midcon">
         <div class="mid_left">
@@ -1092,7 +1067,6 @@
         </div>
     </div>
 </div>
-
 <div class="footer_bottom">
     <p>渝ICP13005525号-2 &nbsp;&nbsp; 渝ICP备10002905 &nbsp;&nbsp;&nbsp; 增值电信业务经营许可证：渝B2-20140042 &nbsp;&nbsp; Copyright
         &copy;&nbsp; 2007-2016epet.com&nbsp; &nbsp;重庆易宠科技有限公司</p>

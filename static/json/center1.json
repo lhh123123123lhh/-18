@@ -1,7 +1,7 @@
 [	
 	[
 	    {
-	        "img":"img/content/9be729227c20b43e3e965a37424a0410.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/9be729227c20b43e3e965a37424a0410.jpg@!200w-c.jpg",
 	        "name":"迪派 培根系列狗狗零食 碳烤鸡肉200g ",
 	        "price":"￥209.5",
 	        "preprice":"￥300",
@@ -9,7 +9,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/363cae7c577b866e9e55c36b0edd08bf.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/363cae7c577b866e9e55c36b0edd08bf.jpg@!200w-c.jpg",
 	        "name":"纽萃宝Nutripe Fit系列活力辅酶Q10狗罐头 羊肉口味 95g ",
 	        "price":"￥302",
 	        "preprice":"￥338.5",
@@ -17,7 +17,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/5c3f7837c3a0b8df2c15fbc9ea4aa6a2.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/5c3f7837c3a0b8df2c15fbc9ea4aa6a2.jpg@!200w-c.jpg",
 	        "name":"亚禾YaHo 好湿粮 中型犬鸡小胸肉妙鲜包 80g  ",
 	        "price":"￥20.9",
 	        "preprice":"￥30",
@@ -25,7 +25,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/6d12737de38777b13eb72b1c453a98e1.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/6d12737de38777b13eb72b1c453a98e1.jpg@!200w-c.jpg",
 	        "name":"亨蒂 双拼洁齿骨 蟹柳味100g ",
 	        "price":"￥109.8",
 	        "preprice":"￥200",
@@ -36,7 +36,7 @@
 	],	
 	[
 	    {
-	        "img":"img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
 	        "name":"风来客 幼犬营养肉压骨 鸡肉味 6支装 ",
 	        "price":"￥84.3",
 	        "preprice":"￥99.6",
@@ -44,7 +44,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/95ff1d9c3798c7d6d1310c81feef1ed8.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/95ff1d9c3798c7d6d1310c81feef1ed8.jpg@!200w-c.jpg",
 	        "name":"柏可心 清新薄荷鸡肉洁齿骨 6寸3支装 150g ",
 	        "price":"￥253.5",
 	        "preprice":"￥267",
@@ -52,7 +52,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/84f9fafcee904848c93261641230ccad.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/84f9fafcee904848c93261641230ccad.jpg@!200w-c.jpg",
 	        "name":"英国MAG 优质配方海藻粉 美毛更出众 400g ",
 	        "price":"￥25",
 	        "preprice":"￥30",
@@ -60,7 +60,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
 	        "name":"美卡MAKAR 七彩糖果犬用缺口单碗 春绿小号",
 	        "price":"￥277.5",
 	        "preprice":"￥370",
@@ -71,7 +71,7 @@
 	],
 	[
 	    {
-	        "img":"img/content/eeb9ca10fc25b12673304848a72f5b67.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/eeb9ca10fc25b12673304848a72f5b67.jpg@!200w-c.jpg",
 	        "name":"天然宝 清除口臭体臭怡神丸 90g",
 	        "price":"￥209.5",
 	        "preprice":"￥300",
@@ -79,7 +79,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/ff3beb0bacad6eb7baee3226e0b2e351.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/ff3beb0bacad6eb7baee3226e0b2e351.jpg@!200w-c.jpg",
 	        "name":"英国MAG 优质配方海藻粉 美毛更出众 400g ",
 	        "price":"￥205",
 	        "preprice":"￥560",
@@ -87,7 +87,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/ddacddde2ce097a2a1b60b68e9a243dc.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/ddacddde2ce097a2a1b60b68e9a243dc.jpg@!200w-c.jpg",
 	        "name":"蓝血贵族BBN 通络宝营养粉400g ",
 	        "price":"￥86",
 	        "preprice":"￥130",
@@ -95,7 +95,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/db225e272a117b155ed226c123fadc82.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/db225e272a117b155ed226c123fadc82.jpg@!200w-c.jpg",
 	        "name":"卡顿KADUN 黄金美毛膏 200g 金色毛宠物美毛",
 	        "price":"￥209.5",
 	        "preprice":"￥300",
@@ -107,7 +107,7 @@
 	],	
 	[
 	    {
-	        "img":"img/content/9be729227c20b43e3e965a37424a0410.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/9be729227c20b43e3e965a37424a0410.jpg@!200w-c.jpg",
 	        "name":"迪派 培根系列狗狗零食 碳烤鸡肉200g ",
 	        "price":"￥209.5",
 	        "preprice":"￥300",
@@ -115,7 +115,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/363cae7c577b866e9e55c36b0edd08bf.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/363cae7c577b866e9e55c36b0edd08bf.jpg@!200w-c.jpg",
 	        "name":"纽萃宝Nutripe Fit系列活力辅酶Q10狗罐头 羊肉口味 95g ",
 	        "price":"￥302",
 	        "preprice":"￥338.5",
@@ -123,7 +123,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/5c3f7837c3a0b8df2c15fbc9ea4aa6a2.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/5c3f7837c3a0b8df2c15fbc9ea4aa6a2.jpg@!200w-c.jpg",
 	        "name":"亚禾YaHo 好湿粮 中型犬鸡小胸肉妙鲜包 80g  ",
 	        "price":"￥20.9",
 	        "preprice":"￥30",
@@ -131,7 +131,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/6d12737de38777b13eb72b1c453a98e1.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/6d12737de38777b13eb72b1c453a98e1.jpg@!200w-c.jpg",
 	        "name":"亨蒂 双拼洁齿骨 蟹柳味100g ",
 	        "price":"￥109.8",
 	        "preprice":"￥200",
@@ -142,7 +142,7 @@
 	],	
 	[
 	    {
-	        "img":"img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
 	        "name":"风来客 幼犬营养肉压骨 鸡肉味 6支装 ",
 	        "price":"￥84.3",
 	        "preprice":"￥99.6",
@@ -150,7 +150,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/95ff1d9c3798c7d6d1310c81feef1ed8.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/95ff1d9c3798c7d6d1310c81feef1ed8.jpg@!200w-c.jpg",
 	        "name":"柏可心 清新薄荷鸡肉洁齿骨 6寸3支装 150g ",
 	        "price":"￥253.5",
 	        "preprice":"￥267",
@@ -158,7 +158,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/84f9fafcee904848c93261641230ccad.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/84f9fafcee904848c93261641230ccad.jpg@!200w-c.jpg",
 	        "name":"英国MAG 优质配方海藻粉 美毛更出众 400g ",
 	        "price":"￥25",
 	        "preprice":"￥30",
@@ -166,7 +166,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
 	        "name":"美卡MAKAR 七彩糖果犬用缺口单碗 春绿小号",
 	        "price":"￥277.5",
 	        "preprice":"￥370",
@@ -177,7 +177,7 @@
 	],
 	[
 	    {
-	        "img":"img/content/eeb9ca10fc25b12673304848a72f5b67.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/eeb9ca10fc25b12673304848a72f5b67.jpg@!200w-c.jpg",
 	        "name":"天然宝 清除口臭体臭怡神丸 90g",
 	        "price":"￥209.5",
 	        "preprice":"￥300",
@@ -185,7 +185,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/ff3beb0bacad6eb7baee3226e0b2e351.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/ff3beb0bacad6eb7baee3226e0b2e351.jpg@!200w-c.jpg",
 	        "name":"英国MAG 优质配方海藻粉 美毛更出众 400g ",
 	        "price":"￥205",
 	        "preprice":"￥560",
@@ -193,7 +193,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/ddacddde2ce097a2a1b60b68e9a243dc.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/ddacddde2ce097a2a1b60b68e9a243dc.jpg@!200w-c.jpg",
 	        "name":"蓝血贵族BBN 通络宝营养粉400g ",
 	        "price":"￥86",
 	        "preprice":"￥130",
@@ -201,7 +201,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/db225e272a117b155ed226c123fadc82.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/db225e272a117b155ed226c123fadc82.jpg@!200w-c.jpg",
 	        "name":"卡顿KADUN 黄金美毛膏 200g 金色毛宠物美毛",
 	        "price":"￥209.5",
 	        "preprice":"￥300",
@@ -213,7 +213,7 @@
 	],
 	[
 	    {
-	        "img":"img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
 	        "name":"风来客 幼犬营养肉压骨 鸡肉味 6支装 ",
 	        "price":"￥84.3",
 	        "preprice":"￥99.6",
@@ -221,7 +221,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/95ff1d9c3798c7d6d1310c81feef1ed8.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/95ff1d9c3798c7d6d1310c81feef1ed8.jpg@!200w-c.jpg",
 	        "name":"柏可心 清新薄荷鸡肉洁齿骨 6寸3支装 150g ",
 	        "price":"￥253.5",
 	        "preprice":"￥267",
@@ -229,7 +229,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/84f9fafcee904848c93261641230ccad.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/84f9fafcee904848c93261641230ccad.jpg@!200w-c.jpg",
 	        "name":"英国MAG 优质配方海藻粉 美毛更出众 400g ",
 	        "price":"￥25",
 	        "preprice":"￥30",
@@ -237,7 +237,7 @@
 	        "span":"即将开始" 
 	    },
 	    {
-	        "img":"img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
+	        "img":"/static/img/content/c2e94e289443a4bfe84f15d077aec3ef.jpg@!200w-c.jpg",
 	        "name":"美卡MAKAR 七彩糖果犬用缺口单碗 春绿小号",
 	        "price":"￥277.5",
 	        "preprice":"￥370",

@@ -10,7 +10,6 @@ $(function () {
             $(".right1_num").css("display", "block");
             $(".right1").css("display", "none");
             $(".phone").addClass("active");
-
         }
     })
 
@@ -60,12 +59,12 @@ $(function () {
                 $(".rank1").css("background", "red");
             }
             if (right5_num > 5) {
-                $(".rank1").css("background", " red");
-                $(".rank2").css("background", " red");
+                $(".rank1").css("background", "gray");
+                $(".rank2").css("background", "red");
             }
             if (right5_num > 10) {
-                $(".rank1").css("background", " red");
-                $(".rank2").css("background", " red");
+                $(".rank1").css("background", "gray");
+                $(".rank2").css("background", "gray");
                 $(".rank3").css("background", " red");
             }
             else {
@@ -84,7 +83,7 @@ $(function () {
             $(".right6_num").css("display", "none");
             $(".repwd").removeClass("active");
         }
-        else if (right6_num != pwds) {
+        else {
             $(".right6_num").css("display", "block");
             $(".right6").css("display", "none");
             $(".repwd").addClass("active");

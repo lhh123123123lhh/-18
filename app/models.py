@@ -72,7 +72,17 @@ class Recommend(models.Model):
 class User(models.Model):
     tel = models.CharField(max_length=20, unique=True)
     username = models.CharField(max_length=30)
-    password = models.CharField(max_length=30)
+    password = models.CharField(max_length=255)
+    token = models.CharField(max_length=255, default='')
 
     class Meta:
         db_table = 'user'
+
+
+class Image(models.Model):
+    img_src = models.CharField(max_length=100)
+    num = models.IntegerField()
+
+    class Meta:
+        db_table = 'image'
+

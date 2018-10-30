@@ -51,7 +51,7 @@ $(function () {
         $(".center1_right").children("div").eq(index).show().siblings().hide();
     })
 
-    $.getJSON("json/center1.json", function (data) {
+    $.getJSON("static/json/center1.json", function (data) {
 
         for (var j = 0; j < data.length; j++) {
             var div1 = $("<div></div>");
@@ -82,4 +82,13 @@ $(function () {
     })
 
 
+})
+// 轮播图
+$(function () {
+    var swiper = new Swiper('#banner', {
+        pagination: '.swiper-pagination',
+        autoplay:true,
+        slidesPerView: 1,
+        time:3000
+    });
 })
