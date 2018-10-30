@@ -121,7 +121,6 @@ $(function () {
     //不存在则注册, 保存到cookie
 
     $(".button").click(function () {
-        $(this).find("input").css("background", "#33CB98");
         //注册(cookie存储)
         var users = $.cookie("users") ? JSON.parse($.cookie("users")) : [];
         //先判断是否存在该用户
@@ -131,7 +130,6 @@ $(function () {
                 return;
             }
         }
-
         //注册用户
         var user = {
             name: $(".user").val(),

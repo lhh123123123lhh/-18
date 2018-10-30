@@ -1,5 +1,5 @@
 $(function () {
-    $.getJSON("json/content.json", function (data) {
+    $.getJSON("static/json/content.json", function (data) {
         for (var j = 0; j < data.length; j++) {
             for (var i = 0; i < data[j].length; i++) {
                 var obj = data[j][i];
