@@ -507,22 +507,135 @@
             </div>
         </div>
     </div>
-
     <div class="content_center1">
         <div class="center1_left">
             <img src="{% static 'img/content/ji1.jpg' %}"/>
         </div>
         <div class="center1_right">
+            <div style="display: none;">
+                {% for item in t_goods_list1 %}
+                    <div class="time_list">
+                        <img src="{{ item.img_src }}">
+                        <p> {{ item.longname }} </p>
+                        <a href="{% url 'app:goods' item.id %}">
+                            <strong>
+                                <h2>{{ item.low_price }}</h2>
+                                <i>{{ item.price }}</i>
+                                <em>{{ item.zhe_kou }}</em>
+                            </strong>
+                            <span>{{ item.start_str }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div style="display: none;">
+                {% for item in t_goods_list2 %}
+                    <div class="time_list">
+                        <img src="{{ item.img_src }}">
+                        <p> {{ item.longname }} </p>
+                        <a href="{% url 'app:goods' item.id %}">
+                            <strong>
+                                <h2>{{ item.low_price }}</h2>
+                                <i>{{ item.price }}</i>
+                                <em>{{ item.zhe_kou }}</em>
+                            </strong>
+                            <span>{{ item.start_str }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div style="display: block;">
+                {% for item in t_goods_list3 %}
+                    <div class="time_list">
+                        <img src="{{ item.img_src }}">
+                        <p> {{ item.longname }} </p>
+                        <a href="{% url 'app:goods' item.id%}">
+                            <strong>
+                                <h2>{{ item.low_price }}</h2>
+                                <i>{{ item.price }}</i>
+                                <em>{{ item.zhe_kou }}</em>
+                            </strong>
+                            <span>{{ item.start_str }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div style="display: none;">
+                {% for item in t_goods_list1 %}
+                    <div class="time_list">
+                        <img src="{{ item.img_src }}">
+                        <p> {{ item.longname }} </p>
+                        <a href="{% url 'app:goods' item.id %}">
+                            <strong>
+                                <h2>{{ item.low_price }}</h2>
+                                <i>{{ item.price }}</i>
+                                <em>{{ item.zhe_kou }}</em>
+                            </strong>
+                            <span>{{ item.start_str }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div style="display: none;">
+                {% for item in t_goods_list2 %}
+                    <div class="time_list">
+                        <img src="{{ item.img_src }}">
+                        <p> {{ item.longname }} </p>
+                        <a href="{% url 'app:goods' item.id %}">
+                            <strong>
+                                <h2>{{ item.low_price }}</h2>
+                                <i>{{ item.price }}</i>
+                                <em>{{ item.zhe_kou }}</em>
+                            </strong>
+                            <span>{{ item.start_str }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div style="display: none;">
+                {% for item in t_goods_list3 %}
+                    <div class="time_list">
+                        <img src="{{ item.img_src }}">
+                        <p> {{ item.longname }} </p>
+                        <a href="{% url 'app:goods' item.id %}">
+                            <strong>
+                                <h2>{{ item.low_price }}</h2>
+                                <i>{{ item.price }}</i>
+                                <em>{{ item.zhe_kou }}</em>
+                            </strong>
+                            <span>{{ item.start_str }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div style="display: none;">
+                {% for item in t_goods_list2 %}
+                    <div class="time_list">
+                        <img src="{{ item.img_src }}">
+                        <p> {{ item.longname }} </p>
+                        <a href="{% url 'app:goods' item.id %}">
+                            <strong>
+                                <h2>{{ item.low_price }}</h2>
+                                <i>{{ item.price }}</i>
+                                <em>{{ item.zhe_kou }}</em>
+                            </strong>
+                            <span>{{ item.start_str }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
 
         </div>
     </div>
-    <div class="content_center2">
-        <p>E仔今天推荐了哪些精品？</p>
-        <div class="center2_main">
-            {% for item in r_goods %}
-                <div class="center2_con">
-                    <img src="{{ item.img_src }}">
-                    <span>
+</div>
+
+<div class="content_center2">
+    <p>E仔今天推荐了哪些精品？</p>
+    <div class="center2_main">
+        {% for item in r_goods %}
+            <div class="center2_con">
+                <img src="{{ item.img_src }}">
+                <span>
                         <h5>{{ item.name }}</h5>
                         <em>
                             <i>{{ item.price }}</i>
@@ -530,418 +643,418 @@
                         </em>
                         <p>{{ item.p }}</p>
                     </span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="content_center3 ww">
+    <div class="center3_top">
+        <p>狗狗主粮</p>
+        <div class="center3t_right">
+            <ul>
+                {% for goods in goods6 %}
+                    <li>
+                        <img src="{{ goods.img_src }}">
+                        <a href="#">{{ goods.detail }}</a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+    <div class="center3_bottom">
+        <div class="center3b_left">
+            <img src="{% static 'img/content/edd3e27b3beb0a378dd3db86fb289af8.jpg' %}"/>
+        </div>
+        <div class="center3b_right mm">
+            <ul id="center3_con">
+                {% for item in item2 %}
+                    <li>
+                        <img src="{{ item.img_src }}">
+                        <span><p>{{ item.name }}</p></span>
+                        <span><p>{{ item.price }}</p></span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content_center4 ww">
+    <div class="center4_top">
+        <p>狗狗零食</p>
+        <div class="center4t_right">
+            <ul>
+                {% for goods in goods5 %}
+                    <li>
+                        <img src="{{ goods.img_src }}">
+                        <a href="#">{{ goods.detail }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="center4_bottom">
+        <div class="center4b_left">
+            <img src="{% static 'img/content/e244d28ac21d8042b9a8b7ef3f948897.jpg' %}"/>
+        </div>
+        <div class="center4b_right mm">
+            <ul id="center4_con">
+                {% for item in item2 %}
+                    <li>
+                        <img src="{{ item.img_src }}">
+                        <span><p>{{ item.name }}</p></span>
+                        <span><p>{{ item.price }}</p></span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content_center5 ww">
+    <div class="center5_top">
+        <p>狗狗保健&amp;医疗</p>
+        <div class="center5t_right">
+            <ul>
+                {% for goods in goods4 %}
+                    <li>
+                        <img src="{{ goods.img_src }}">
+                        <a href="#">{{ goods.detail }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="center5_bottom">
+        <div class="center5b_left">
+            <img src="{% static 'img/content/6b2f574c8fb415406aa643825a904fcb.jpg' %}"/>
+        </div>
+        <div class="center5b_right mm">
+            <ul id="center5_con">
+                {% for item in item2 %}
+                    <li>
+                        <img src="{{ item.img_src }}">
+                        <span><p>{{ item.name }}</p></span>
+                        <span><p>{{ item.price }}</p></span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content_center6 ww">
+    <div class="center6_top">
+        <p>狗狗日用</p>
+        <div class="center6t_right">
+            <ul>
+                {% for goods in goods3 %}
+                    <li>
+                        <img src="{{ goods.img_src }}">
+                        <a href="#">{{ goods.detail }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="center6_bottom">
+        <div class="center6b_left">
+            <img src="{% static 'img/content/9cfcfde9e61889bdfacb2958a4b53c20.jpg' %}"/>
+        </div>
+        <div class="center6b_right mm">
+            <ul id="center6_con">
+                {% for item in item2 %}
+                    <li>
+                        <img src="{{ item.img_src }}">
+                        <span><p>{{ item.name }}</p></span>
+                        <span><p>{{ item.price }}</p></span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content_center7 ww">
+    <div class="center7_top">
+        <p>狗狗香波&amp;美容</p>
+        <div class="center7t_right">
+            <ul>
+                {% for goods in goods2 %}
+                    <li>
+                        <img src="{{ goods.img_src }}">
+                        <a href="#">{{ goods.detail }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="center7_bottom">
+        <div class="center7b_left">
+            <img src="{% static 'img/content/efb696a1129d2c565502564de0c6a3b2.jpg' %}"/>
+        </div>
+        <div class="center7b_right mm">
+            <ul id="center7_con">
+                {% for item in item1 %}
+                    <li>
+                        <img src="{{ item.img_src }}">
+                        <span><p>{{ item.name }}</p></span>
+                        <span><p>{{ item.price }}</p></span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content_center8 ww">
+    <div class="center8_top">
+        <p>狗狗牵引&amp;玩具&amp;服饰</p>
+        <div class="center8t_right">
+            <ul>
+                {% for goods in goods1 %}
+                    <li>
+                        <img src="{{ goods.img_src }}">
+                        <a href="#">{{ goods.detail }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="center8_bottom">
+        <div class="center8b_left">
+            <img src="{% static 'img/content/fc5db4aabee9baf4323c7f6731de7bdb.jpg' %}"/>
+        </div>
+        <div class="center8b_right mm">
+            <ul id="center8_con">
+                {% for item in items %}
+                    <li>
+                        <img src="{{ item.img_src }}">
+                        <span><p>{{ item.name }}</p></span>
+                        <span><p>{{ item.price }}</p></span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content_center9">
+    <div class="center9_left">
+        <div class="center9l_top">
+            <p>感谢给我们的口碑和评价</p>
+            <span>更多>></span>
+        </div>
+        <div class="center9l_bottom">
+            <div class="center9lb_con">
+                <div class="center9lb_main">
+                    <div class="center9lbc_img">
+                        <img src="{% static 'img/content/b6b7f5bc4760dba77e99daa3c1868ffb.jpg@!150w-c.jpg' %}"/>
+                    </div>
+                    <div class="center9lbc_info">
+                        <a href="#"><img
+                                src="{% static 'img/content/8d5efef4b484b9f40e6d41baee7eb93b.png@!100w-c.jpg' %}"/></a>
+
+                        <ul>
+                            <li>点点</li>
+                            <li></li>
+                            <li>积分：</li>
+                            <li>+50</li>
+                            <li>E宠币：</li>
+                            <li>+5</li>
+                        </ul>
+
+
+                    </div>
+                    <div class="center9lbc_p">
+                        <p>很不错，新鲜食材的味道，牛油果的清香伴着肉腥味，没有奇怪的味道和口感，不咸，虽然小黑嘴特别叼，
+                            但是经过耐心换粮，就很愿意吃了，在天然粮里面适口性算很好了，大便量少不臭，不软不硬，
+                            吸收消化的很不错。毛色也吃的变好些了，不错的粮食。</p>
+                        <h5><img src="{% static 'img/content/QQ截图20160913154935.png' %}"/></h5>
+                    </div>
                 </div>
+            </div>
+
+            <div class="center9lb_con">
+                <div class="center9lb_main">
+                    <div class="center9lbc_img">
+                        <img src="{% static 'img/content/d58f4cab98123b96abfce2403cafbb40.jpg@!150w-c.jpg' %}"/>
+                    </div>
+                    <div class="center9lbc_info">
+                        <a href="#"><img
+                                src="{% static 'img/content/a3e2ceb9382a175da087fe9f758db7a2.png@!100w-c.jpg' %}"/></a>
+
+                        <ul>
+                            <li>点点</li>
+                            <li></li>
+                            <li>积分：</li>
+                            <li>+50</li>
+                            <li>E宠币：</li>
+                            <li>+5</li>
+                        </ul>
+
+
+                    </div>
+                    <div class="center9lbc_p">
+                        <p>是送的生日礼物，狗狗超级喜欢，整个飞盘都会发出声音，还领了生日优惠卷买的东西，
+                            超级划算，e宠真是超级有心，每年都会给狗狗送生日礼物</p>
+                        <h5><img src="{% static 'img/content/QQ截图20160913154935.png' %}"/></h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center9lb_con">
+                <div class="center9lb_main">
+                    <div class="center9lbc_img">
+                        <img src="{% static 'img/content/3011722e548da212751382ae4e323830.jpg@!150w-c.jpg' %}"/>
+                    </div>
+                    <div class="center9lbc_info">
+                        <a href="#"><img
+                                src="{% static 'img/content/b4452130a62469cb51b602623547ea5a.png@!100w-c.jpg' %}"/></a>
+
+                        <ul>
+                            <li>点点</li>
+                            <li></li>
+                            <li>积分：</li>
+                            <li>+50</li>
+                            <li>E宠币：</li>
+                            <li>+5</li>
+                        </ul>
+
+
+                    </div>
+                    <div class="center9lbc_p">
+                        <p>很有效，给外面流浪狗狗吃了，打出来好多虫子。家里狗狗吃了没看见虫子估计是没有。
+                            捡来的流浪猫肚子鼓鼓的吃完药就不鼓了，很好，多备点在家里</p>
+                        <h5><img src="{% static 'img/content/QQ截图20160913154935.png' %}"/></h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center9lb_con">
+                <div class="center9lb_main">
+                    <div class="center9lbc_img">
+                        <img src="{% static 'img/content/08e217cb9378e6c7697d0852c07631f5.jpg@!150w-c.jpg' %}"/>
+                    </div>
+                    <div class="center9lbc_info">
+                        <a href="#"><img
+                                src="{% static 'img/content/2fd9df30c268bbbf2c5747e095a539c5.png@!100w-c.jpg' %}"/></a>
+
+                        <ul>
+                            <li>点点</li>
+                            <li></li>
+                            <li>积分：</li>
+                            <li>+50</li>
+                            <li>E宠币：</li>
+                            <li>+5</li>
+                        </ul>
+
+
+                    </div>
+                    <div class="center9lbc_p">
+                        <p>很不错，新鲜食材的味道，牛油果的清香伴着肉腥味，没有奇怪的味道和口感，不咸，虽然小黑嘴特别叼，
+                            但是经过耐心换粮，就很愿意吃了，在天然粮里面适口性算很好了，大便量少不臭，不软不硬，
+                            吸收消化的很不错。毛色也吃的变好些了，不错的粮食。</p>
+                        <h5><img src="{% static 'img/content/QQ截图20160913154935.png' %}"/></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center9_right">
+        <div class="center9r_top">
+            <a href="#"><img src="{% static 'img/content/dy_btn.jpg' %}"/></a>
+            <ul>
+                {% for dog1 in dog1s %}
+                    <li>
+                        <img src="{{ dog1.img_src }}">
+                        <p>{{ dog1.detail }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="center9r_bottom">
+            <div class="center9rb_top">
+                <a href="#">代言TOP</a>
+                <a href="#">达宠TOP</a>
+            </div>
+            <div class="center9rb_bottom">
+                <ul>
+                    {% for dog in dogs %}
+                        <li>
+                            <img src="{{ dog.img_src }}">
+                            <p>{{ dog.name }}</p>
+                            <span>{{ dog.num }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content_center10">
+    <div class="center10_top">
+        <h5>快速导航：</h5>
+        <ul>
+            <li><a href="#">美国Wellness</a></li>
+            <li><a href="#">处方狗粮</a></li>
+            <li><a href="#">国产狗粮</a></li>
+            <li><a href="#">狗粮排行榜</a></li>
+            <li><a href="#">咖比狗粮</a></li>
+            <li><a href="#">海洋之星幼犬粮</a></li>
+            <li><a href="#">福摩狗粮</a></li>
+            <li><a href="#">美国Wellness</a></li>
+            <li><a href="#">处方狗粮</a></li>
+            <li><a href="#">国产狗粮</a></li>
+            <li><a href="#">狗粮排行榜</a></li>
+            <li><a href="#">咖比狗粮</a></li>
+            <li><a href="#">海洋之星幼犬粮</a></li>
+            <li><a href="#">福摩狗粮</a></li>
+        </ul>
+        <span>更多</span>
+    </div>
+    <div class="center10_top">
+        <h5>快速导航：</h5>
+        <ul>
+            <li><a href="#">美国Wellness</a></li>
+            <li><a href="#">处方狗粮</a></li>
+            <li><a href="#">国产狗粮</a></li>
+            <li><a href="#">狗粮排行榜</a></li>
+            <li><a href="#">咖比狗粮</a></li>
+            <li><a href="#">海洋之星幼犬粮</a></li>
+            <li><a href="#">福摩狗粮</a></li>
+            <li><a href="#">美国Wellness</a></li>
+            <li><a href="#">处方狗粮</a></li>
+            <li><a href="#">国产狗粮</a></li>
+            <li><a href="#">狗粮排行榜</a></li>
+            <li><a href="#">咖比狗粮</a></li>
+            <li><a href="#">海洋之星幼犬粮</a></li>
+            <li><a href="#">福摩狗粮</a></li>
+        </ul>
+        <span>更多</span>
+    </div>
+</div>
+<div class="content_center11">
+    <div class="center11_con">
+        <h5>友情链接：</h5>
+        <ul>
+            {% for link in links %}
+                <li>
+                    <a href="#">{{ link.name }}</a>
+                </li>
             {% endfor %}
-        </div>
+        </ul>
+        <ul>
+            {% for link in links %}
+                <li>
+                    <a href="#">{{ link.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul>
+            {% for link1 in link1s %}
+                <li>
+                    <a href="#">{{ link1.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
-    <div class="content_center3 ww">
-        <div class="center3_top">
-            <p>狗狗主粮</p>
-            <div class="center3t_right">
-                <ul>
-                    {% for goods in goods6 %}
-                        <li>
-                            <img src="{{ goods.img_src }}">
-                            <a href="#">{{ goods.detail }}</a>
-                        </li>
-                    {% endfor %}
-
-                </ul>
-            </div>
-        </div>
-        <div class="center3_bottom">
-            <div class="center3b_left">
-                <img src="{% static 'img/content/edd3e27b3beb0a378dd3db86fb289af8.jpg' %}"/>
-            </div>
-            <div class="center3b_right mm">
-                <ul id="center3_con">
-                    {% for item in item2 %}
-                        <li>
-                            <img src="{{ item.img_src }}">
-                            <span><p>{{ item.name }}</p></span>
-                            <span><p>{{ item.price }}</p></span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="content_center4 ww">
-        <div class="center4_top">
-            <p>狗狗零食</p>
-            <div class="center4t_right">
-                <ul>
-                    {% for goods in goods5 %}
-                        <li>
-                            <img src="{{ goods.img_src }}">
-                            <a href="#">{{ goods.detail }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="center4_bottom">
-            <div class="center4b_left">
-                <img src="{% static 'img/content/e244d28ac21d8042b9a8b7ef3f948897.jpg' %}"/>
-            </div>
-            <div class="center4b_right mm">
-                <ul id="center4_con">
-                    {% for item in item2 %}
-                        <li>
-                            <img src="{{ item.img_src }}">
-                            <span><p>{{ item.name }}</p></span>
-                            <span><p>{{ item.price }}</p></span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="content_center5 ww">
-        <div class="center5_top">
-            <p>狗狗保健&amp;医疗</p>
-            <div class="center5t_right">
-                <ul>
-                    {% for goods in goods4 %}
-                        <li>
-                            <img src="{{ goods.img_src }}">
-                            <a href="#">{{ goods.detail }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="center5_bottom">
-            <div class="center5b_left">
-                <img src="{% static 'img/content/6b2f574c8fb415406aa643825a904fcb.jpg' %}"/>
-            </div>
-            <div class="center5b_right mm">
-                <ul id="center5_con">
-                    {% for item in item2 %}
-                        <li>
-                            <img src="{{ item.img_src }}">
-                            <span><p>{{ item.name }}</p></span>
-                            <span><p>{{ item.price }}</p></span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="content_center6 ww">
-        <div class="center6_top">
-            <p>狗狗日用</p>
-            <div class="center6t_right">
-                <ul>
-                    {% for goods in goods3 %}
-                        <li>
-                            <img src="{{ goods.img_src }}">
-                            <a href="#">{{ goods.detail }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="center6_bottom">
-            <div class="center6b_left">
-                <img src="{% static 'img/content/9cfcfde9e61889bdfacb2958a4b53c20.jpg' %}"/>
-            </div>
-            <div class="center6b_right mm">
-                <ul id="center6_con">
-                    {% for item in item2 %}
-                        <li>
-                            <img src="{{ item.img_src }}">
-                            <span><p>{{ item.name }}</p></span>
-                            <span><p>{{ item.price }}</p></span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="content_center7 ww">
-        <div class="center7_top">
-            <p>狗狗香波&amp;美容</p>
-            <div class="center7t_right">
-                <ul>
-                    {% for goods in goods2 %}
-                        <li>
-                            <img src="{{ goods.img_src }}">
-                            <a href="#">{{ goods.detail }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="center7_bottom">
-            <div class="center7b_left">
-                <img src="{% static 'img/content/efb696a1129d2c565502564de0c6a3b2.jpg' %}"/>
-            </div>
-            <div class="center7b_right mm">
-                <ul id="center7_con">
-                    {% for item in item1 %}
-                        <li>
-                            <img src="{{ item.img_src }}">
-                            <span><p>{{ item.name }}</p></span>
-                            <span><p>{{ item.price }}</p></span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="content_center8 ww">
-        <div class="center8_top">
-            <p>狗狗牵引&amp;玩具&amp;服饰</p>
-            <div class="center8t_right">
-                <ul>
-                    {% for goods in goods1 %}
-                        <li>
-                            <img src="{{ goods.img_src }}">
-                            <a href="#">{{ goods.detail }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="center8_bottom">
-            <div class="center8b_left">
-                <img src="{% static 'img/content/fc5db4aabee9baf4323c7f6731de7bdb.jpg' %}"/>
-            </div>
-            <div class="center8b_right mm">
-                <ul id="center8_con">
-                    {% for item in items %}
-                        <li>
-                            <img src="{{ item.img_src }}">
-                            <span><p>{{ item.name }}</p></span>
-                            <span><p>{{ item.price }}</p></span>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="content_center9">
-        <div class="center9_left">
-            <div class="center9l_top">
-                <p>感谢给我们的口碑和评价</p>
-                <span>更多>></span>
-            </div>
-            <div class="center9l_bottom">
-                <div class="center9lb_con">
-                    <div class="center9lb_main">
-                        <div class="center9lbc_img">
-                            <img src="{% static 'img/content/b6b7f5bc4760dba77e99daa3c1868ffb.jpg@!150w-c.jpg' %}"/>
-                        </div>
-                        <div class="center9lbc_info">
-                            <a href="#"><img
-                                    src="{% static 'img/content/8d5efef4b484b9f40e6d41baee7eb93b.png@!100w-c.jpg' %}"/></a>
-
-                            <ul>
-                                <li>点点</li>
-                                <li></li>
-                                <li>积分：</li>
-                                <li>+50</li>
-                                <li>E宠币：</li>
-                                <li>+5</li>
-                            </ul>
-
-
-                        </div>
-                        <div class="center9lbc_p">
-                            <p>很不错，新鲜食材的味道，牛油果的清香伴着肉腥味，没有奇怪的味道和口感，不咸，虽然小黑嘴特别叼，
-                                但是经过耐心换粮，就很愿意吃了，在天然粮里面适口性算很好了，大便量少不臭，不软不硬，
-                                吸收消化的很不错。毛色也吃的变好些了，不错的粮食。</p>
-                            <h5><img src="{% static 'img/content/QQ截图20160913154935.png' %}"/></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="center9lb_con">
-                    <div class="center9lb_main">
-                        <div class="center9lbc_img">
-                            <img src="{% static 'img/content/d58f4cab98123b96abfce2403cafbb40.jpg@!150w-c.jpg' %}"/>
-                        </div>
-                        <div class="center9lbc_info">
-                            <a href="#"><img
-                                    src="{% static 'img/content/a3e2ceb9382a175da087fe9f758db7a2.png@!100w-c.jpg' %}"/></a>
-
-                            <ul>
-                                <li>点点</li>
-                                <li></li>
-                                <li>积分：</li>
-                                <li>+50</li>
-                                <li>E宠币：</li>
-                                <li>+5</li>
-                            </ul>
-
-
-                        </div>
-                        <div class="center9lbc_p">
-                            <p>是送的生日礼物，狗狗超级喜欢，整个飞盘都会发出声音，还领了生日优惠卷买的东西，
-                                超级划算，e宠真是超级有心，每年都会给狗狗送生日礼物</p>
-                            <h5><img src="{% static 'img/content/QQ截图20160913154935.png' %}"/></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="center9lb_con">
-                    <div class="center9lb_main">
-                        <div class="center9lbc_img">
-                            <img src="{% static 'img/content/3011722e548da212751382ae4e323830.jpg@!150w-c.jpg' %}"/>
-                        </div>
-                        <div class="center9lbc_info">
-                            <a href="#"><img
-                                    src="{% static 'img/content/b4452130a62469cb51b602623547ea5a.png@!100w-c.jpg' %}"/></a>
-
-                            <ul>
-                                <li>点点</li>
-                                <li></li>
-                                <li>积分：</li>
-                                <li>+50</li>
-                                <li>E宠币：</li>
-                                <li>+5</li>
-                            </ul>
-
-
-                        </div>
-                        <div class="center9lbc_p">
-                            <p>很有效，给外面流浪狗狗吃了，打出来好多虫子。家里狗狗吃了没看见虫子估计是没有。
-                                捡来的流浪猫肚子鼓鼓的吃完药就不鼓了，很好，多备点在家里</p>
-                            <h5><img src="{% static 'img/content/QQ截图20160913154935.png' %}"/></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="center9lb_con">
-                    <div class="center9lb_main">
-                        <div class="center9lbc_img">
-                            <img src="{% static 'img/content/08e217cb9378e6c7697d0852c07631f5.jpg@!150w-c.jpg' %}"/>
-                        </div>
-                        <div class="center9lbc_info">
-                            <a href="#"><img
-                                    src="{% static 'img/content/2fd9df30c268bbbf2c5747e095a539c5.png@!100w-c.jpg' %}"/></a>
-
-                            <ul>
-                                <li>点点</li>
-                                <li></li>
-                                <li>积分：</li>
-                                <li>+50</li>
-                                <li>E宠币：</li>
-                                <li>+5</li>
-                            </ul>
-
-
-                        </div>
-                        <div class="center9lbc_p">
-                            <p>很不错，新鲜食材的味道，牛油果的清香伴着肉腥味，没有奇怪的味道和口感，不咸，虽然小黑嘴特别叼，
-                                但是经过耐心换粮，就很愿意吃了，在天然粮里面适口性算很好了，大便量少不臭，不软不硬，
-                                吸收消化的很不错。毛色也吃的变好些了，不错的粮食。</p>
-                            <h5><img src="{% static 'img/content/QQ截图20160913154935.png' %}"/></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="center9_right">
-            <div class="center9r_top">
-                <a href="#"><img src="{% static 'img/content/dy_btn.jpg' %}"/></a>
-                <ul>
-                    {% for dog1 in dog1s %}
-                        <li>
-                            <img src="{{ dog1.img_src }}">
-                            <p>{{ dog1.detail }}</p>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="center9r_bottom">
-                <div class="center9rb_top">
-                    <a href="#">代言TOP</a>
-                    <a href="#">达宠TOP</a>
-                </div>
-                <div class="center9rb_bottom">
-                    <ul>
-                        {% for dog in dogs %}
-                            <li>
-                                <img src="{{ dog.img_src }}">
-                                <p>{{ dog.name }}</p>
-                                <span>{{ dog.num }}</span>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content_center10">
-        <div class="center10_top">
-            <h5>快速导航：</h5>
-            <ul>
-                <li><a href="#">美国Wellness</a></li>
-                <li><a href="#">处方狗粮</a></li>
-                <li><a href="#">国产狗粮</a></li>
-                <li><a href="#">狗粮排行榜</a></li>
-                <li><a href="#">咖比狗粮</a></li>
-                <li><a href="#">海洋之星幼犬粮</a></li>
-                <li><a href="#">福摩狗粮</a></li>
-                <li><a href="#">美国Wellness</a></li>
-                <li><a href="#">处方狗粮</a></li>
-                <li><a href="#">国产狗粮</a></li>
-                <li><a href="#">狗粮排行榜</a></li>
-                <li><a href="#">咖比狗粮</a></li>
-                <li><a href="#">海洋之星幼犬粮</a></li>
-                <li><a href="#">福摩狗粮</a></li>
-            </ul>
-            <span>更多</span>
-        </div>
-        <div class="center10_top">
-            <h5>快速导航：</h5>
-            <ul>
-                <li><a href="#">美国Wellness</a></li>
-                <li><a href="#">处方狗粮</a></li>
-                <li><a href="#">国产狗粮</a></li>
-                <li><a href="#">狗粮排行榜</a></li>
-                <li><a href="#">咖比狗粮</a></li>
-                <li><a href="#">海洋之星幼犬粮</a></li>
-                <li><a href="#">福摩狗粮</a></li>
-                <li><a href="#">美国Wellness</a></li>
-                <li><a href="#">处方狗粮</a></li>
-                <li><a href="#">国产狗粮</a></li>
-                <li><a href="#">狗粮排行榜</a></li>
-                <li><a href="#">咖比狗粮</a></li>
-                <li><a href="#">海洋之星幼犬粮</a></li>
-                <li><a href="#">福摩狗粮</a></li>
-            </ul>
-            <span>更多</span>
-        </div>
-    </div>
-    <div class="content_center11">
-        <div class="center11_con">
-            <h5>友情链接：</h5>
-            <ul>
-                {% for link in links %}
-                    <li>
-                        <a href="#">{{ link.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for link in links %}
-                    <li>
-                        <a href="#">{{ link.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for link1 in link1s %}
-                    <li>
-                        <a href="#">{{ link1.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
+</div>
 </div>
 <!--内容结束-->
 <!--尾部开始-->

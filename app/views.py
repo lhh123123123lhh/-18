@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from app.models import Site, Data, Link, Dog, Dog1, Goods, Item, Recommend, User, Image
+from app.models import Site, Data, Link, Dog, Dog1, Goods, Item, Recommend, User, Image, TimeGoods
 
 
 # 首页
@@ -39,8 +39,12 @@ def homepage(request):
     item2 = Item.objects.all()[16:24]
     # Recommend
     r_goods = Recommend.objects.all()
-    # IMage
+    # Image
     images = Image.objects.all()
+    # t_goods
+    t_goods_list1 = TimeGoods.objects.all()[0:4]
+    t_goods_list2 = TimeGoods.objects.all()[4:8]
+    t_goods_list3 = TimeGoods.objects.all()[8:12]
     data = {
         'safesites': safesites,
         'honoursites': honoursites,
@@ -55,6 +59,8 @@ def homepage(request):
         'user': user,
         'token': token,
         'images': images,
+        't_goods_list1': t_goods_list1, 't_goods_list2': t_goods_list2, 't_goods_list3': t_goods_list3,
+
     }
     return render(request, 'homepage.html', context=data)
 
@@ -123,8 +129,9 @@ def common(request):
     return render(request, 'common.html')
 
 
-def goods(request):
-    return render(request, 'goods.html')
+def goods(request, goodsid):
+    t_goods = TimeGoods.objects.get(pk=goodsid)
+    return render(request, 'goods.html', context={'t_goods': t_goods})
 
 
 def goods2(request):

@@ -161,11 +161,11 @@
                 </div>
 
                 <div class="img_list">
-                    <img src="{% static 'img/goods/91a509803c440df0ef472911c63f84f0.jpg@!100w-c.jpg' %}"
+                    <img src="{{ t_goods.img_src }}"
                          class="goodsImg">
-                    <img src="{% static 'img/goods/1726c8e64575c7ee8e87168120d59479.jpg@!100w-c.jpg' %}">
-                    <img src="{% static 'img/goods/91a509803c440df0ef472911c63f84f0.jpg@!100w-c.jpg' %}">
-                    <img src="{% static 'img/goods/1726c8e64575c7ee8e87168120d59479.jpg@!100w-c.jpg' %}">
+                    <img src="{{ t_goods.img_src }}">
+                    <img src="{{ t_goods.img_src }}">
+                    <img src="{{ t_goods.img_src }}">
                 </div>
                 <div class="enjoin">
                     <a href="#">分享</a>
@@ -179,15 +179,15 @@
                     <img id="bigImg" src="{% static 'img/goods/1726c8e64575c7ee8e87168120d59479_看图王.jpg' %}">
                 </div>
                 <div class="info_con">
-                    <h3 class="goodsName">2012新品 美国DEXAS 无腿双碗 大号粉色 外出必备 </h3>
+                    <h3 class="goodsName">{{ t_goods.longname }} </h3>
                     <div class="price">
                         <div class="pre_price">
                             <span>市面价：</span>
-                            <i class="goodsPrice">￥58.9</i>
+                            <i class="goodsPrice">{{ t_goods.price }}</i>
                         </div>
                         <div class="now_price">
                             <span>E宠价：</span>
-                            <i>￥44.40</i>
+                            <i>{{ t_goods.low_price }}</i>
                         </div>
                     </div>
 

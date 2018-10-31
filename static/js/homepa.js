@@ -56,36 +56,18 @@ $(function () {
         $(".center1_right").children("div").eq(index).show().siblings().hide();
     })
 
-    $.getJSON("static/json/center1.json", function (data) {
-
-        for (var j = 0; j < data.length; j++) {
-            var div1 = $("<div></div>");
-            for (var i = 0; i < data[j].length; i++) {
-                var obj = data[j][i];
-                var div = $("<div><img src=" + obj.img + " /><p>" + obj.name + "</p><a href='#'><strong><h2>" + obj.price + "</h2><i>" + obj.preprice + "</i><em>" + obj.activity + "</em></strong><span>" + obj.span + "</span></a></div>");
-                div.addClass("time_list");
-                div1.append(div);
-            }
-
-            $(".center1_right").append(div1);
-            $(".center1_right").children("div").eq(1).show().siblings().hide();
-
-            //进入商品详情
-            $(".time_list").click(function () {
-                var i = $(this).index();
-                if (i == 0) {
-                    location.href = "goods.html";
-                }
-                if (i == 1) {
-                    location.href = "goods2.html";
-                }
-            })
-
-        }
-
-
-    })
-
-
+    // $.getJSON("static/json/center1.json", function (data) {
+    //
+    //     for (var j = 0; j < data.length; j++) {
+    //         var div1 = $("<div></div>");
+    //         for (var i = 0; i < data[j].length; i++) {
+    //             var obj = data[j][i];
+    //             var div = $("<div><img src=" + obj.img + " /><p>" + obj.name + "</p><a href='#'><strong><h2>" + obj.price + "</h2><i>" + obj.preprice + "</i><em>" + obj.activity + "</em></strong><span>" + obj.span + "</span></a></div>");
+    //             div.addClass("time_list");
+    //             div1.append(div);
+    //         }
+    //
+    //         $(".center1_right").append(div1);
+    $(".center1_right").children("div").eq(1).show().siblings().hide();
 })
 

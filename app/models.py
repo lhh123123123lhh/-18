@@ -86,3 +86,14 @@ class Image(models.Model):
     class Meta:
         db_table = 'image'
 
+
+class TimeGoods(models.Model):
+    img_src = models.CharField(max_length=150)
+    longname = models.CharField(max_length=150)
+    low_price = models.CharField(max_length=30)
+    price = models.CharField(max_length=30)
+    zhe_kou = models.CharField(max_length=50)
+    start_str = models.CharField(max_length=30)
+
+    class Meta:
+        db_table = 't_goods'
