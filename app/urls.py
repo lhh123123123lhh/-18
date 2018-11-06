@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^common/$', views.common, name='common'),
     url(r'^goods/(\d+)/$', views.goods, name='goods'),
     url(r'^goods2/$', views.goods2, name='goods2'),
+    url(r'^CheckTel/$', views.CheckTel, name='CheckTel'),
 ]

@@ -56,7 +56,9 @@ a {
 }
 
 .loginh_right ul li a {
-    color: #999;
+    height: 20px;
+    line-height: 20px;
+    color: grey;
 }
 
 .loginh_right ul li a:hover {
@@ -94,14 +96,17 @@ a {
     width: 340px;
     height: 68px;
     border-bottom: 1px solid #ccc;
+
 }
 
-.login_tab li {
-    width: 170px;
+.login_tab .method {
+    width: 100%;
     height: 68px;
     line-height: 68px;
     text-align: center;
-    float: left;
+}
+.login_tab .method span{
+    font-size: 25px;
 }
 
 .login_input {
@@ -109,14 +114,37 @@ a {
     height: 134px;
 }
 
-.text {
+.tel {
     width: 340px;
     height: 47px;
     margin-top: 20px;
     border: 1px solid #ccc;
 }
+.right1,.right2{
+    display: none;
+    width: 30px;
+    height: 54px;
+    float: left;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+.placeholder1 {
+    width: 170px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    background: #fff3d9;
+    color: #ff95a3;
+    float: left;
+    margin-left: 10px;
+    display: none;
+}
+.active {
+    color: red;
+    border-color: red;
+}
 
-.text span {
+.tel span {
     display: block;
     width: 23px;
     height: 19px;
@@ -126,7 +154,7 @@ a {
     margin-left: 5px;
 }
 
-.text input {
+.tel input {
     width: 296px;
     height: 47px;
     border: none;
@@ -255,7 +283,9 @@ a {
 .footer_list li a {
     margin-left: 10px;
     font-size: 12px;
-    color: #CECBC6;
+    color: grey;
+    height: 20px;
+    line-height: 20px;
 }
 
 .footer_list li a:hover {
@@ -265,4 +295,5 @@ a {
 .footer_list p {
     width: 1100px;
     height: 20px;
+    color: grey;
 }

@@ -32,28 +32,28 @@
         <div class="login">
             <form action="{% url 'app:register' %}" method="post">
                 {% csrf_token %}
-                <div class="text">
+                <div class="text" id="tel">
                     <span>手机号：</span>
-                    <input type="text" placeholder="请输入手机号码" class="phone" name="tel"/>
+                    <input type="text" placeholder="请输入手机号码" name="tel"/>
                     <em class="right1"><img src="{% static 'img/register/ok_03.jpg' %}"/></em>
                     <i class="right1_num">请输入11位电话号码</i>
                 </div>
-                <div class="text">
+                <div class="text" id="txtVerification">
                     <span>验证码：</span>
-                    <input type="text" id="Txtidcode" class="txtVerification"><span id="idcode"></span>
+                    <input type="text" id="Txtidcode" placeholder="区分大小写"><span id="idcode"></span>
                     <input type="button" class="btn" value="换一换"/>
                     <em class="right2"><img src="{% static 'img/register/ok_03.jpg' %}"/></em>
                     <i class="right2_num">请输入4位验证码</i>
                 </div>
-                <div class="text">
+                <div class="text" id="user">
                     <span>用户名：</span>
-                    <input type="text" placeholder="用户名" class="user" name="username"/>
+                    <input type="text" placeholder="用户名" name="username"/>
                     <em class="right4"><img src="{% static 'img/register/ok_03.jpg' %}"/></em>
                     <i class="right4_num">请输入4-20位用户名</i>
                 </div>
-                <div class="text" id="text">
+                <div class="text" id="password">
                     <span>密码：</span>
-                    <input type="password" placeholder="密码（8-20位，区分大小写）" class="pwds" name="password"/>
+                    <input type="password" placeholder="密码（6-12位）" name="password"/>
                     <em class="right5"><img src="{% static 'img/register/ok_03.jpg' %}"/></em>
                     <i class="right5_num">请输入8-20位密码</i>
                     <ul>
@@ -62,9 +62,9 @@
                         <li class="rank3">强</li>
                     </ul>
                 </div>
-                <div class="text">
+                <div class="text" id="passwd">
                     <span>确认密码：</span>
-                    <input type="password" placeholder="确认密码" class="repwd"/>
+                    <input type="password" placeholder="确认密码"/>
                     <em class="right6"><img src="{% static 'img/register/ok_03.jpg' %}"/></em>
                     <i class="right6_num">请输入确认密码</i>
                 </div>

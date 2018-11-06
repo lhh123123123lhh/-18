@@ -1,7 +1,7 @@
 import hashlib
 import uuid
 
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -129,6 +129,7 @@ def common(request):
     return render(request, 'common.html')
 
 
+# 商品详情页
 def goods(request, goodsid):
     t_goods = TimeGoods.objects.get(pk=goodsid)
     return render(request, 'goods.html', context={'t_goods': t_goods})
@@ -136,3 +137,19 @@ def goods(request, goodsid):
 
 def goods2(request):
     return render(request, 'goods2.html')
+
+
+# 手机号验证
+def CheckTel(request):
+    tel = request.GET.get('phone')
+    users = User.objects.filter(tel=tel)
+    responseDate = {
+        'msg': '该账号可用',
+        'status': 1
+    }
+    if users.exists():
+        responseDate['msg'] = '账号已存在',
+        responseDate['status'] = -1,
+        return JsonResponse(responseDate)
+    else:
+        return JsonResponse(responseDate)

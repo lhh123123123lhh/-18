@@ -32,7 +32,12 @@
                         还未登录
                     {% endif %}
                 </li>
-                <li><a href="{% url 'app:logout' %}">退出登录</a></li>
+                <li><a href="{% url 'app:logout' %}">
+                    {% if token %}
+                        退出登录
+                    {% else %}
+                    {% endif %}
+                </a></li>
                 <li><a href="{% url 'app:login' %}">[登录]</a></li>
                 <li><a href="{% url 'app:register' %}">[注册]</a></li>
                 <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
@@ -549,7 +554,7 @@
                     <div class="time_list">
                         <img src="{{ item.img_src }}">
                         <p> {{ item.longname }} </p>
-                        <a href="{% url 'app:goods' item.id%}">
+                        <a href="{% url 'app:goods' item.id %}">
                             <strong>
                                 <h2>{{ item.low_price }}</h2>
                                 <i>{{ item.price }}</i>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}"/>
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
 </head>
 <body>
 <div class="login_head">
@@ -29,26 +30,27 @@
         <div class="login_con">
             <div class="login_main">
                 <div class="login_tab">
-                    <ul>
-                        <li>普通登录</li>
-                        <li>手机动态密码登录</li>
-                    </ul>
+                    <div class="method">
+                        <span>普通登录</span>
+                    </div>
                 </div>
                 <form action="{% url 'app:login' %}" method="post">
                     {% csrf_token %}
                     <div class="login_input">
-                        <div class="text">
+                        <div class="tel">
                             <span></span>
-                            <input type="text" placeholder="手机号/用户名" class="users" name="username"/>
+                            <input type="text" placeholder="手机号" name="username"/>
+                            <em class="right1"><img src="{% static 'img/register/ok_03.jpg' %}"/></em>
+                            <i class="placeholder1">请输入11位电话号码</i>
                         </div>
                         <div class="pwd">
                             <span></span>
-                            <input type="password" placeholder="密码" class="pwdss" name="password"/>
+                            <input type="password" placeholder="密码" name="password"/>
                         </div>
                     </div>
                     <div class="check">
 							<span>
-								<input type="checkbox"/>
+								<input type="checkbox" name="auto"/>
 								<i>自动登录</i>
 							</span>
                         <a href="#">忘记密码?</a>
