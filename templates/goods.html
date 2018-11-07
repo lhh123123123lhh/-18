@@ -6,12 +6,9 @@
     <title></title>
     <link rel="stylesheet" href="{% static 'css/common.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/goods.css' %}"/>
-
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/goods.js' %}"></script>
-{#    <script type="text/javascript" src="{% static 'js/test.js' %}"></script>#}
-
 </head>
 <body>
 
@@ -27,8 +24,7 @@
         </div>
         <div class="header_right">
             <ul>
-                <li><a href="#">[登录]</a></li>
-                <li><a href="#">[注册]</a></li>
+                <li></li>
                 <li><a href="shopcar.html">购物车</a></li>
                 <li id="mypet">
                     <a href="#">我的E宠<img src="{% static 'img/common_img/h5.gif' %}"></a>
@@ -46,9 +42,6 @@
                         <input value="保存到桌面" class="save" type="button">
                     </div>
                 </li>
-                <li><a href="#">手机版</a></li>
-                <li><a href="#">帮助</a></li>
-                <li><a href="#" class="lastli">投诉建议</a></li>
             </ul>
         </div>
     </div>
@@ -156,7 +149,7 @@
         <!--//放大镜-->
         <div class="goodscar">
             <div class="glass">
-                <div id="smallImg">
+                <div id="smallImg" bgimg="{{ t_goods.img_src }}">
                     <div id="smallArea" style="width: 100px; height: 100px;"></div>
                 </div>
 
@@ -168,8 +161,7 @@
                     <img src="{{ t_goods.img_src }}">
                 </div>
                 <div class="enjoin">
-                    <a href="#">分享</a>
-                    <a href="#">咨询</a>
+                    {{ t_goods.longname }}
                 </div>
             </div>
 
@@ -212,19 +204,11 @@
                     </div>
 
                     <div class="size">
-                        <div class="big">
-                            <span>型号：</span>
-                            <a href="#">大号</a>
-                        </div>
-                        <div class="color">
-                            <span>颜色：</span>
-                            <a href="#">粉色</a>
-                        </div>
                         <div class="buy">
                             <span>我要买：</span>
-                            <a href="#" class="minu">-</a>
-                            <input value="1" class="goodsNum" type="text">
-                            <a href="#" class="add">+</a>
+                            <div class="minu">-</div>
+                            <b class="num">1</b>
+                            <div class="add">+</div>
                             个
                         </div>
                     </div>
@@ -234,7 +218,7 @@
                     </div>
 
                     <div class="car_btn">
-                        <input value="加入购物车" class="addCart" type="button">
+                        <input value="加入购物车" class="addCart" type="button" goodsid="{{ t_goods.id }}">
                         <a href="#"><i></i>咨询</a>
                     </div>
                 </div>
@@ -245,91 +229,6 @@
 
 
 <!--尾部开始-->
-<div class="footer">
-    <div class="footer_top">
-        <div class="top_list">
-            <ul>
-                <li>
-                    <img src="{% static 'img/common_img/QQ图片20160909175522_03.gif' %}">
-                    <p>绝对正品</p>
-                </li>
-                <li>
-                    <img src="{% static 'img/common_img/QQ图片20160909175522_05.gif' %}">
-                    <p>全球的好货</p>
-                </li>
-                <li>
-                    <img src="{% static 'img/common_img/QQ图片20160909175522_07.gif' %}">
-                    <p>自家的仓库</p>
-                </li>
-                <li>
-                    <img src="{% static 'img/common_img/QQ图片20160909175522_09.gif' %}">
-                    <p>自家的配送</p>
-                </li>
-                <li>
-                    <img src="{% static 'img/common_img/QQ图片20160909175522_11.gif' %}">
-                    <p>养宠的帮手</p>
-                </li>
-                <li>
-                    <img src="{% static 'img/common_img/QQ图片20160909175522_13.gif' %}">
-                    <p>小小的成绩</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="bottom_list">
-            <div class="bot_left">
-                <h5><img src="{% static 'img/common_img/QQ图片20160909175522_22.gif' %}"></h5>
-                <div class="left_con">
-                    <h3>服务热线：</h3>
-                    <p>400-888-9200<span>（免长途费）</span></p>
-                    <i>023-65584888</i>
-                    <em>工作时间：9：00-21：00</em>
-                </div>
-            </div>
-            <div class="bot_right">
-                <ul class="list_right">
-                    <li>
-                        <h2>支付方式</h2>
-                        <div class="con_list">
-                            <a href="#">货到付款</a>
-                            <a href="#">余额支付</a>
-                            <a href="#">银行转账</a>
-                            <a href="#">在线支付</a>
-                        </div>
-                    </li>
-                    <li>
-                        <h2>配送方式</h2>
-                        <div class="con_list">
-                            <a href="#">E宠快递</a>
-                            <a href="#">外包快递</a>
-                            <a href="#">物流运输</a>
-                            <a href="#">公司地址</a>
-                        </div>
-                    </li>
-                    <li>
-                        <h2>购物指南</h2>
-                        <div class="con_list">
-                            <a href="#">退换货政策</a>
-                            <a href="#">它时尚杂志</a>
-                            <a href="#">常见问题</a>
-                            <a href="#">宠物知识</a>
-                        </div>
-                    </li>
-                    <li>
-                        <h2>关于我们</h2>
-                        <div class="con_list">
-                            <a href="#">关于我们</a>
-                            <a href="#">仓储中心</a>
-                            <a href="#">联系我们</a>
-                            <a href="#">人才招聘</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="footer_mid">
     <div class="footer_midcon">
         <div class="mid_left">

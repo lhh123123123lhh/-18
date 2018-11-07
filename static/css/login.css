@@ -105,7 +105,8 @@ a {
     line-height: 68px;
     text-align: center;
 }
-.login_tab .method span{
+
+.login_tab .method span {
     font-size: 25px;
 }
 
@@ -120,28 +121,13 @@ a {
     margin-top: 20px;
     border: 1px solid #ccc;
 }
-.right1,.right2{
-    display: none;
-    width: 30px;
-    height: 54px;
-    float: left;
-    padding-top: 20px;
-    padding-left: 5px;
-}
-.placeholder1 {
-    width: 170px;
-    height: 54px;
-    text-align: center;
-    line-height: 54px;
-    background: #fff3d9;
-    color: #ff95a3;
-    float: left;
-    margin-left: 10px;
-    display: none;
-}
-.active {
-    color: red;
+
+.false {
     border-color: red;
+}
+
+.true {
+    border-color: green;
 }
 
 .tel span {
@@ -160,14 +146,22 @@ a {
     border: none;
 }
 
-.pwd {
+.passwd {
     width: 340px;
     height: 47px;
     margin-top: 20px;
     border: 1px solid #ccc;
 }
 
-.pwd span {
+.false {
+    border-color: red;
+}
+
+.true {
+    border-color: green;
+}
+
+.passwd span {
     display: block;
     width: 23px;
     height: 19px;
@@ -177,7 +171,7 @@ a {
     margin-left: 5px;
 }
 
-.pwd input {
+.passwd input {
     width: 296px;
     height: 47px;
     border: none;

@@ -5,7 +5,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from app.models import Site, Data, Link, Dog, Dog1, Goods, Item, Recommend, User, Image, TimeGoods
+from app.models import Site, Data, Link, Dog, Dog1, Goods, Item, Recommend, User, Image, TimeGoods, Cart
 
 
 # 首页
@@ -70,9 +70,10 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
     elif request.method == 'POST':
-        username = request.POST.get('username')
+        tel = request.POST.get('tel')
+        # print(tel)
         password = generate_password(request.POST.get('password'))
-        users = User.objects.filter(username=username).filter(password=password)
+        users = User.objects.filter(tel=tel).filter(password=password)
         if users.exists():
             user = users.first()
             user.token = uuid.uuid5(uuid.uuid4(), 'cxj')
@@ -122,7 +123,18 @@ def generate_password(password):
 
 # 购物车
 def shopcar(request):
-    return render(request, 'shopcar.html')
+    token = request.COOKIES.get('token')
+    if token:
+        user = User.objects.get(token=token)
+        carts = Cart.objects.filter(user=user)
+        date = {
+            'token': token,
+            'carts': carts,
+            'user': user
+        }
+        return render(request, 'shopcar.html', context=date)
+    else:
+        return render(request,'login.html')
 
 
 def common(request):
@@ -153,3 +165,32 @@ def CheckTel(request):
         return JsonResponse(responseDate)
     else:
         return JsonResponse(responseDate)
+
+
+def AddToCart(request):
+    goodsid = request.GET.get('goodsid')
+    num = request.GET.get('num')
+    token = request.COOKIES.get('token')
+    responseData = {
+        'msg': '添加购物车成功',
+        'status': 1
+    }
+    if token:
+        user = User.objects.get(token=token)
+        goods = TimeGoods.objects.get(pk=goodsid)
+        carts = Cart.objects.filter(user=user).filter(goods=goods)
+        if carts.exists():
+            cart = carts.first()
+            cart.number = int(num) + cart.number
+            cart.save()
+        else:
+            cart = Cart()
+            cart.user = user
+            cart.goods = goods
+            cart.number = num
+            cart.save()
+        return JsonResponse(responseData)
+    else:
+        responseData['msg'] = '未登录，请登录后操作'
+        responseData['status'] = -1
+        return JsonResponse(responseData)

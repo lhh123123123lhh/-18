@@ -39,24 +39,22 @@
                     <div class="login_input">
                         <div class="tel">
                             <span></span>
-                            <input type="text" placeholder="手机号" name="username"/>
-                            <em class="right1"><img src="{% static 'img/register/ok_03.jpg' %}"/></em>
-                            <i class="placeholder1">请输入11位电话号码</i>
+                            <input type="text" placeholder="手机号" name="tel"/>
                         </div>
-                        <div class="pwd">
+                        <div class="passwd">
                             <span></span>
                             <input type="password" placeholder="密码" name="password"/>
                         </div>
                     </div>
                     <div class="check">
 							<span>
-								<input type="checkbox" name="auto"/>
+								<input type="checkbox" name="auto" required="required"/>
 								<i>自动登录</i>
 							</span>
                         <a href="#">忘记密码?</a>
                     </div>
                     <div class="btn">
-                        <input type="submit" value="登录"/>
+                        <input type="submit" value="登录" required="required"/>
                     </div>
                 </form>
 

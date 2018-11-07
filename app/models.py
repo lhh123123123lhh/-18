@@ -97,3 +97,13 @@ class TimeGoods(models.Model):
 
     class Meta:
         db_table = 't_goods'
+
+
+class Cart(models.Model):
+    user = models.ForeignKey(User)
+    goods = models.ForeignKey(TimeGoods)
+    number = models.IntegerField()
+    isselect = models.BooleanField(default=True)
+
+    class Meta:
+        db_table = 'cart'

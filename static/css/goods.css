@@ -229,14 +229,14 @@
 /*主体*/
 .goods_con {
     width: 100%;
-    height: auto;
+    height: 600px;
     overflow: hidden;
     background: #f5f5f5;
 }
 
 .goods_main {
     width: 1200px;
-    height: 700px;
+    height: 600px;
     background: #fff;
     margin: 0 auto;
 }
@@ -399,7 +399,8 @@
 #smallImg {
     width: 200px;
     height: 200px;
-    background: url(../img/goods/1726c8e64575c7ee8e87168120d59479_看图王.jpg) center;
+    background: center;
+    background-image: url(../img/goods/1726c8e64575c7ee8e87168120d59479_看图王.jpg);
     background-size: cover;
     position: absolute;
     left: 100px;
@@ -449,12 +450,15 @@
 }
 
 .enjoin {
-    width: 100px;
+    width: 300px;
     height: 30px;
     position: absolute;
     top: 400px;
-    left: 200px;
+    left: 50px;
     margin-top: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
 }
 
 .info_con {
@@ -537,59 +541,9 @@
 
 .size {
     width: 700px;
-    height: 130px;
+    height: 50px;
     border-bottom: 1px dashed #ccc;
     padding-top: 20px;
-}
-
-.big {
-    width: 200px;
-    height: 35px;
-    line-height: 35px;
-}
-
-.big span {
-    display: block;
-    width: 50px;
-    height: 30px;
-    float: left;
-}
-
-.big a {
-    display: block;
-    width: 50px;
-    height: 30px;
-    float: left;
-    background: #fff;
-    border: 1px solid #E6E6E6;
-    text-align: center;
-    line-height: 30px;
-    background: url(../img/goods/goods-select.png) right bottom no-repeat;
-}
-
-.color {
-    width: 250px;
-    height: 35px;
-    line-height: 35px;
-}
-
-.color span {
-    display: block;
-    width: 50px;
-    height: 30px;
-    float: left;
-}
-
-.color a {
-    display: block;
-    width: 50px;
-    height: 30px;
-    float: left;
-    background: #fff;
-    border: 1px solid #E6E6E6;
-    text-align: center;
-    line-height: 30px;
-    background: url(../img/goods/goods-select.png) right bottom no-repeat;
 }
 
 .buy {
@@ -605,7 +559,7 @@
     float: left;
 }
 
-.buy input {
+.buy b {
     width: 30px;
     height: 35px;
     float: left;
@@ -614,7 +568,7 @@
 
 .minu {
     display: block;
-    width: 14px;
+    width: 20px;
     height: 35px;
     float: left;
     background: #fff;
@@ -624,7 +578,7 @@
 
 .add {
     display: block;
-    width: 14px;
+    width: 20px;
     height: 35px;
     float: left;
     background: #fff;
