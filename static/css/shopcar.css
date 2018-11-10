@@ -151,8 +151,22 @@
     float: left;
 }
 
-.checkAll input {
-    margin: 50px 10px;
+.checkAll .no {
+    width: 12px;
+    height: 12px;
+    border: 1px gray solid;
+    margin: 50px 20px;
+    border-radius: 50%;
+}
+
+.checkAll .click {
+    background-color: green;
+    width: 12px;
+    height: 12px;
+    margin: 50px 20px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 0 3px rgba(255, 80, 0, .2);
 }
 
 .picture {
@@ -177,6 +191,7 @@
     float: left;
     line-height: 89px;
     margin-left: 10px;
+    overflow: hidden;
 }
 
 .num {
@@ -187,16 +202,19 @@
     margin-top: 45px;
     line-height: 50px;
 }
-.num b{
+
+.num b {
     float: left;
     font-size: 20px;
     margin-right: 10px;
 }
-.num i{
+
+.num i {
     float: left;
     font-size: 20px;
     margin-left: 15px;
 }
+
 .num span {
     display: block;
     width: 15px;
@@ -251,17 +269,31 @@
     float: left;
     margin: 20px 10px;
     font-size: 14px;
+    line-height: 30px;
 }
 
-.removeAll a {
-    color: #000;
-    margin-left: 20px;
+.removeAll .qx{
+    width: 12px;
+    height: 12px;
+    border: 1px gray solid;
+    border-radius: 50%;
+    margin: 9px 10px;
+    float: left;
 }
-
+.removeAll .xz{
+    background-color: green;
+    width: 12px;
+    height: 12px;
+    margin: 9px 10px;
+    border-radius: 50%;
+    float: left;
+    box-shadow: 0 0 0 3px rgba(255, 80, 0, .2);
+}
 .total {
     width: 400px;
     height: 62px;
     float: right;
+    line-height: 62px;
 }
 
 .total span {
@@ -274,15 +306,15 @@
     line-height: 62px;
 }
 
-.total h3 {
+.total h5 {
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     color: #d4082a;
-    margin-top: 20px;
+    margin-top: auto;
 }
 
 .count {
-    width: 200px;
+    width: 150px;
     height: 62px;
     float: right;
     line-height: 62px;

@@ -91,7 +91,7 @@
             </h5>
             <h4>
                 <img src="{% static 'img/homepage/shopping-cart.gif' %}"/>
-                <a href="{% url 'app:shopcar' %}">购物车（0）</a>
+                <a href="{% url 'app:shopcar' %}">购物车（<b>{{ carts_num }}</b>）</a>
             </h4>
         </div>
 

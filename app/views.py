@@ -45,6 +45,9 @@ def homepage(request):
     t_goods_list1 = TimeGoods.objects.all()[0:4]
     t_goods_list2 = TimeGoods.objects.all()[4:8]
     t_goods_list3 = TimeGoods.objects.all()[8:12]
+    # 购物车
+    carts = Cart.objects.filter(user=user)
+    carts_num = carts.count()
     data = {
         'safesites': safesites,
         'honoursites': honoursites,
@@ -60,6 +63,7 @@ def homepage(request):
         'token': token,
         'images': images,
         't_goods_list1': t_goods_list1, 't_goods_list2': t_goods_list2, 't_goods_list3': t_goods_list3,
+        'carts_num': carts_num,
 
     }
     return render(request, 'homepage.html', context=data)
@@ -126,7 +130,7 @@ def shopcar(request):
     token = request.COOKIES.get('token')
     if token:
         user = User.objects.get(token=token)
-        carts = Cart.objects.filter(user=user)
+        carts = Cart.objects.filter(user=user).exclude(number=0)
         date = {
             'token': token,
             'carts': carts,
@@ -134,7 +138,7 @@ def shopcar(request):
         }
         return render(request, 'shopcar.html', context=date)
     else:
-        return render(request,'login.html')
+        return render(request, 'login.html')
 
 
 def common(request):
@@ -143,8 +147,12 @@ def common(request):
 
 # 商品详情页
 def goods(request, goodsid):
+    token = request.COOKIES.get('token')
+    user = User.objects.filter(token=token).first()
+    carts = Cart.objects.filter(user=user)
+    carts_num = carts.count()
     t_goods = TimeGoods.objects.get(pk=goodsid)
-    return render(request, 'goods.html', context={'t_goods': t_goods})
+    return render(request, 'goods.html', context={'t_goods': t_goods, 'carts_num': carts_num})
 
 
 def goods2(request):
@@ -167,6 +175,7 @@ def CheckTel(request):
         return JsonResponse(responseDate)
 
 
+# 添加物品到购物车
 def AddToCart(request):
     goodsid = request.GET.get('goodsid')
     num = request.GET.get('num')
@@ -194,3 +203,87 @@ def AddToCart(request):
         responseData['msg'] = '未登录，请登录后操作'
         responseData['status'] = -1
         return JsonResponse(responseData)
+
+
+# 单个点击事件
+def click(request):
+    cartid = request.GET.get('cartid')
+    cart = Cart.objects.get(pk=cartid)
+    cart.isselect = not cart.isselect
+    cart.save()
+
+    responseData = {
+        'msg': '选中状态改变',
+        'status': 1,
+        'isselect': cart.isselect
+    }
+
+    return JsonResponse(responseData)
+
+
+# 删除物品
+def remove(request):
+    goodsid = request.GET.get('goodsid')
+    token = request.COOKIES.get('token')
+    user = User.objects.get(token=token)
+    carts = Cart.objects.filter(user=user).filter(goods=goodsid)
+    carts.delete()
+    return JsonResponse({'msg': 'ok', 'status': 1})
+
+
+# 全选/取消全选
+def change(request):
+    isselect = request.GET.get('isselect')
+    if isselect == 'true':
+        isselect = True
+    else:
+        isselect = False
+
+    token = request.COOKIES.get('token')
+    user = User.objects.get(token=token)
+    carts = Cart.objects.filter(user=user)
+    for cart in carts:
+        cart.isselect = isselect
+        cart.save()
+
+    return JsonResponse({'msg': '反选操作成功', 'status': 1})
+
+
+# 购物车的点击添加事件
+def addcart(request):
+    goodsid = request.GET.get('goodsid')
+    token = request.COOKIES.get('token')
+
+    responseData = {
+        'msg': '添加购物车成功',
+        'status': 1
+    }
+    user = User.objects.get(token=token)
+    goods = TimeGoods.objects.get(pk=goodsid)
+    carts = Cart.objects.filter(user=user).filter(goods=goods)
+    cart = carts.first()
+    cart.number = cart.number + 1
+    cart.save()
+    responseData['number'] = cart.number
+    return JsonResponse(responseData)
+
+
+# 购物车的点击减少事件
+def subcart(request):
+    goodsid = request.GET.get('goodsid')
+    token = request.COOKIES.get('token')
+
+    responseData = {
+        'msg': '减少物品数量成功',
+        'status': 1
+    }
+    user = User.objects.get(token=token)
+    goods = TimeGoods.objects.get(pk=goodsid)
+    carts = Cart.objects.filter(user=user).filter(goods=goods)
+    cart = carts.first()
+    cart.number = cart.number - 1
+    if cart.number < 0:
+        cart.number = 0
+    cart.save()
+    responseData['number'] = cart.number
+    return JsonResponse(responseData)

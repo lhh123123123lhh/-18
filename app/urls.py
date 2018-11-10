@@ -13,4 +13,9 @@ urlpatterns = [
     url(r'^goods2/$', views.goods2, name='goods2'),
     url(r'^CheckTel/$', views.CheckTel, name='CheckTel'),
     url(r'^AddToCart/$', views.AddToCart, name='AddToCart'),
+    url(r'^click/$', views.click, name='click'),
+    url(r'^remove/$', views.remove, name='remove'),
+    url(r'^change/$', views.change, name='change'),
+    url(r'^addcart/$', views.addcart, name='addcart'),
+    url(r'^subcart/$', views.subcart, name='subcart'),
 ]

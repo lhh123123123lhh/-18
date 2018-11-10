@@ -29,9 +29,9 @@
                         {{ user.username }}
                     {% endif %}
                 </li>
-                <li>[登录]</li>
-                <li>[注册]</li>
-                <li>购物车</li>
+                <li><a href="{% url 'app:login' %}">[登录]</a></li>
+                <li><a href="{% url 'app:register' %}">[注册]</a></li>
+                <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
                 <li id="mypet">
                     <a href="#">我的E宠<img src="{% static 'img/common_img/h5.gif' %}"></a>
                     <div class="mypet">
@@ -48,7 +48,7 @@
                         <input value="保存到桌面" class="save" type="button">
                     </div>
                 </li>
-                <li>手机版</li>
+                <li><a href="{% url 'app:homepage' %}">继续添加商品</a></li>
             </ul>
         </div>
     </div>
@@ -86,19 +86,26 @@
             <div class="shopcar_list">
                 <ul class="list_ul">
                     {% for cart in carts %}
-                        <li>
-                            <div class="checkAll"><input type="checkbox"></div>
-                            <div class="picture"><h1><img
-                                    src="{{ cart.goods.img_src }}">
-                            </h1>
+                        <li class="goods">
+                            <div class="checkAll">
+                                {% if cart.isselect %}
+                                    <div class="click bt" cartid="{{ cart.id }}" isselect="{{ cart.isselect }}"></div>
+                                {% else %}
+                                    <div class="no bt" cartid="{{ cart.id }}" isselect="{{ cart.isselect }}"></div>
+                                {% endif %}
+                            </div>
+                            <div class="picture">
+                                <h1>
+                                    <img src="{{ cart.goods.img_src }}">
+                                </h1>
                                 <p>{{ cart.goods.longname }}</p></div>
                             <div class="num">
-                                <b class="sub">-</b>
-                                <span>x{{ cart.number }}</span>
-                                <i class="add">+</i>
+                                <b class="sub" goodsid="{{ cart.goods.id }}">-</b>
+                                <span number="{{ cart.number }}">x{{ cart.number }}</span>
+                                <i class="add" goodsid="{{ cart.goods.id }}">+</i>
                             </div>
-                            <div class="price">{{ cart.goods.price }}<span>{{ cart.goods.low_price }}/件</span></div>
-                            <div class="remove"><b class="removecookie">[删除]</b></div>
+                            <div class="price" price="{{ cart.goods.low_price }}">{{ cart.goods.low_price }}<span>{{ cart.goods.price }}/件</span></div>
+                            <div class="remove" goodsid="{{ cart.goods_id }}"><b class="removecookie">[删除]</b></div>
                         </li>
                     {% endfor %}
 
@@ -107,13 +114,12 @@
 
             <div class="account">
                 <div class="removeAll">
-                    <input type="checkbox">
+                    <div class="qx" isselect="false"></div>
                     <i>全选</i>
-                    <a href="#">[删除选中商品]</a>
                 </div>
                 <div class="total">
                     <span>总价（不含运费）:</span>
-                    <h3>￥324.00</h3>
+                    ￥<h5>324.00</h5>
                     <div class="count">
                         去结算
                         <i></i>

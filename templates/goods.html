@@ -25,7 +25,7 @@
         <div class="header_right">
             <ul>
                 <li></li>
-                <li><a href="shopcar.html">购物车</a></li>
+                <li><a href="{% url 'app:shopcar' %}">购物车</a></li>
                 <li id="mypet">
                     <a href="#">我的E宠<img src="{% static 'img/common_img/h5.gif' %}"></a>
                     <div class="mypet">
@@ -75,7 +75,7 @@
             </h5>
             <h4>
                 <img src="{% static 'img/homepage/shopping-cart.gif' %}">
-                <a href="#">购物车（0）</a>
+                <a href="{% url 'app:shopcar' %}">购物车（<b>{{ carts_num }}</b>）</a>
             </h4>
         </div>
 
